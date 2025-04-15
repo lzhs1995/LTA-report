@@ -1,0 +1,266 @@
+TITLE:
+RI-LTA (Invariant)
+DATA:
+FILE = "ri_ta.dat";
+ 
+VARIABLE:
+NAMES = pid closz_t1 closz_t2 closz_t3 closz_t4 clos_t1 clos_t2 clos_t3 clos_t4
+     esupz_t1 esupz_t2 esupz_t3 esupz_t4 esup_t1 esup_t2 esup_t3 esup_t4 edwz_t1
+     edwz_t2 edwz_t3 edwz_t4 edw_t1 edw_t2 edw_t3 edw_t4 isupz_t1 isupz_t2 isupz_t3
+     isupz_t4 isup_t1 isup_t2 isup_t3 isup_t4 idwz_t1 idwz_t2 idwz_t3 idwz_t4 idw_t1
+     idw_t2 idw_t3 idw_t4 meetz_t1 meetz_t2 meetz_t3 meetz_t4 meet_t1 meet_t2
+     meet_t3 meet_t4 contz_t1 contz_t2 contz_t3 contz_t4 cont_t1 cont_t2 cont_t3
+     cont_t4 oppz_t1 oppz_t2 oppz_t3 oppz_t4 opp_t1 opp_t2 opp_t3 opp_t4 opp5z_t1
+     opp5z_t2 opp5z_t3 opp5z_t4 opp5_t1 opp5_t2 opp5_t3 opp5_t4 opp5n_t1 opp5n_t2
+     opp5n_t3 opp5n_t4 agec_t1 agec_t2 agec_t3 agec_t4 educ_t1 educ_t2 educ_t3
+     educ_t4 siopc_t1 siopc_t2 siopc_t3 siopc_t4 age1_t1 age1_t2 age1_t3 age1_t4
+     age1_t11 age1_t13 age1_t21 age1_t23 age1_t31 age1_t33 age1_t41 age1_t43 edu1_t1
+     edu1_t2 edu1_t3 edu1_t4 edu1_t11 edu1_t13 edu1_t21 edu1_t23 edu1_t31 edu1_t33
+     edu1_t41 edu1_t43 siop1_t1 siop1_t2 siop1_t3 siop1_t4 sip1_t11 sip1_t13
+     sip1_t21 sip1_t23 sip1_t31 sip1_t33 sip1_t41 sip1_t43 age2_t1 age2_t2 age2_t3
+     age2_t4 age2_t11 age2_t13 age2_t21 age2_t23 age2_t31 age2_t33 age2_t41 age2_t43
+     edu2_t1 edu2_t2 edu2_t3 edu2_t4 edu2_t11 edu2_t13 edu2_t21 edu2_t23 edu2_t31
+     edu2_t33 edu2_t41 edu2_t43 siop2_t1 siop2_t2 siop2_t3 siop2_t4 sip2_t11
+     sip2_t13 sip2_t21 sip2_t23 sip2_t31 sip2_t33 sip2_t41 sip2_t43 age3_t1 age3_t2
+     age3_t3 age3_t4 age3_t11 age3_t13 age3_t21 age3_t23 age3_t31 age3_t33 age3_t41
+     age3_t43 edu3_t1 edu3_t2 edu3_t3 edu3_t4 edu3_t11 edu3_t13 edu3_t21 edu3_t23
+     edu3_t31 edu3_t33 edu3_t41 edu3_t43 siop3_t1 siop3_t2 siop3_t3 siop3_t4
+     sip3_t11 sip3_t13 sip3_t21 sip3_t23 sip3_t31 sip3_t33 sip3_t41 sip3_t43 incc_t1
+     incc_t2 incc_t3 incc_t4 hwc_t1 hwc_t2 hwc_t3 hwc_t4 inccf inccs incct inccv
+     inccw incca hwcf hwcs hwct hwcv hwcw hwca incnf incns incnt incnv incnw incna
+     hwnf hwns hwnt hwnv hwnw hwna inc1_t1 inc1_t2 inc1_t3 inc1_t4 inc2_t1 inc2_t2
+     inc2_t3 inc2_t4 inc3_t1 inc3_t2 inc3_t3 inc3_t4 inc1_t11 inc1_t13 inc1_t21
+     inc1_t23 inc1_t31 inc1_t33 inc1_t41 inc1_t43 inc2_t11 inc2_t13 inc2_t21
+     inc2_t23 inc2_t31 inc2_t33 inc2_t41 inc2_t43 inc3_t11 inc3_t13 inc3_t21
+     inc3_t23 inc3_t31 inc3_t33 inc3_t41 inc3_t43 hw1_t1 hw1_t2 hw1_t3 hw1_t4 hw2_t1
+     hw2_t2 hw2_t3 hw2_t4 hw3_t1 hw3_t2 hw3_t3 hw3_t4 hw1_t11 hw1_t13 hw1_t21
+     hw1_t23 hw1_t31 hw1_t33 hw1_t41 hw1_t43 hw2_t11 hw2_t13 hw2_t21 hw2_t23 hw2_t31
+     hw2_t33 hw2_t41 hw2_t43 hw3_t11 hw3_t13 hw3_t21 hw3_t23 hw3_t31 hw3_t33 hw3_t41
+     hw3_t43 inc11f inc11s inc11t inc11v inc11w inc11a inc11x inc11y inc11z inc13x
+     inc13y inc13z inc11f_1 inc11f_3 inc11f_5 inc11f_7 inc11s_1 inc11s_3 inc11s_5
+     inc11s_7 inc11t_1 inc11t_3 inc11t_5 inc11t_7 inc11v_1 inc11v_3 inc11v_5
+     inc11v_7 inc11w_1 inc11w_3 inc11w_5 inc11w_7 inc11a_1 inc11a_3 inc11a_5
+     inc11a_7 inc11x_1 inc11x_3 inc11x_5 inc11x_7 inc11y_1 inc11y_3 inc11y_5
+     inc11y_7 inc11z_1 inc11z_3 inc11z_5 inc11z_7 inc13x_1 inc13x_3 inc13x_5
+     inc13x_7 inc13y_1 inc13y_3 inc13y_5 inc13y_7 inc13z_1 inc13z_3 inc13z_5
+     inc13z_7 inc12f inc12s inc12t inc12v inc12w inc12a inc12x inc12y inc12z inc14x
+     inc14y inc14z inc12f_1 inc12f_3 inc12f_5 inc12f_7 inc12s_1 inc12s_3 inc12s_5
+     inc12s_7 inc12t_1 inc12t_3 inc12t_5 inc12t_7 inc12v_1 inc12v_3 inc12v_5
+     inc12v_7 inc12w_1 inc12w_3 inc12w_5 inc12w_7 inc12a_1 inc12a_3 inc12a_5
+     inc12a_7 inc12x_1 inc12x_3 inc12x_5 inc12x_7 inc12y_1 inc12y_3 inc12y_5
+     inc12y_7 inc12z_1 inc12z_3 inc12z_5 inc12z_7 inc14x_1 inc14x_3 inc14x_5
+     inc14x_7 inc14y_1 inc14y_3 inc14y_5 inc14y_7 inc14z_1 inc14z_3 inc14z_5
+     inc14z_7 hw11f hw11s hw11t hw11v hw11w hw11a hw11x hw11y hw11z hw13x hw13y
+     hw13z hw11f_1 hw11f_3 hw11f_5 hw11f_7 hw11s_1 hw11s_3 hw11s_5 hw11s_7 hw11t_1
+     hw11t_3 hw11t_5 hw11t_7 hw11v_1 hw11v_3 hw11v_5 hw11v_7 hw11w_1 hw11w_3 hw11w_5
+     hw11w_7 hw11a_1 hw11a_3 hw11a_5 hw11a_7 hw11x_1 hw11x_3 hw11x_5 hw11x_7 hw11y_1
+     hw11y_3 hw11y_5 hw11y_7 hw11z_1 hw11z_3 hw11z_5 hw11z_7 hw13x_1 hw13x_3 hw13x_5
+     hw13x_7 hw13y_1 hw13y_3 hw13y_5 hw13y_7 hw13z_1 hw13z_3 hw13z_5 hw13z_7 hw12f
+     hw12s hw12t hw12v hw12w hw12a hw12x hw12y hw12z hw14x hw14y hw14z hw12f_1
+     hw12f_3 hw12f_5 hw12f_7 hw12s_1 hw12s_3 hw12s_5 hw12s_7 hw12t_1 hw12t_3 hw12t_5
+     hw12t_7 hw12v_1 hw12v_3 hw12v_5 hw12v_7 hw12w_1 hw12w_3 hw12w_5 hw12w_7 hw12a_1
+     hw12a_3 hw12a_5 hw12a_7 hw12x_1 hw12x_3 hw12x_5 hw12x_7 hw12y_1 hw12y_3 hw12y_5
+     hw12y_7 hw12z_1 hw12z_3 hw12z_5 hw12z_7 hw14x_1 hw14x_3 hw14x_5 hw14x_7 hw14y_1
+     hw14y_3 hw14y_5 hw14y_7 hw14z_1 hw14z_3 hw14z_5 hw14z_7 inc21f inc21s inc21t
+     inc21v inc21w inc21a inc21x inc21y inc21z inc23x inc23y inc23z inc21f_1
+     inc21f_3 inc21f_5 inc21f_7 inc21s_1 inc21s_3 inc21s_5 inc21s_7 inc21t_1
+     inc21t_3 inc21t_5 inc21t_7 inc21v_1 inc21v_3 inc21v_5 inc21v_7 inc21w_1
+     inc21w_3 inc21w_5 inc21w_7 inc21a_1 inc21a_3 inc21a_5 inc21a_7 inc21x_1
+     inc21x_3 inc21x_5 inc21x_7 inc21y_1 inc21y_3 inc21y_5 inc21y_7 inc21z_1
+     inc21z_3 inc21z_5 inc21z_7 inc23x_1 inc23x_3 inc23x_5 inc23x_7 inc23y_1
+     inc23y_3 inc23y_5 inc23y_7 inc23z_1 inc23z_3 inc23z_5 inc23z_7 inc22f inc22s
+     inc22t inc22v inc22w inc22a inc22x inc22y inc22z inc24x inc24y inc24z inc22f_1
+     inc22f_3 inc22f_5 inc22f_7 inc22s_1 inc22s_3 inc22s_5 inc22s_7 inc22t_1
+     inc22t_3 inc22t_5 inc22t_7 inc22v_1 inc22v_3 inc22v_5 inc22v_7 inc22w_1
+     inc22w_3 inc22w_5 inc22w_7 inc22a_1 inc22a_3 inc22a_5 inc22a_7 inc22x_1
+     inc22x_3 inc22x_5 inc22x_7 inc22y_1 inc22y_3 inc22y_5 inc22y_7 inc22z_1
+     inc22z_3 inc22z_5 inc22z_7 inc24x_1 inc24x_3 inc24x_5 inc24x_7 inc24y_1
+     inc24y_3 inc24y_5 inc24y_7 inc24z_1 inc24z_3 inc24z_5 inc24z_7 hw21f hw21s
+     hw21t hw21v hw21w hw21a hw21x hw21y hw21z hw23x hw23y hw23z hw21f_1 hw21f_3
+     hw21f_5 hw21f_7 hw21s_1 hw21s_3 hw21s_5 hw21s_7 hw21t_1 hw21t_3 hw21t_5 hw21t_7
+     hw21v_1 hw21v_3 hw21v_5 hw21v_7 hw21w_1 hw21w_3 hw21w_5 hw21w_7 hw21a_1 hw21a_3
+     hw21a_5 hw21a_7 hw21x_1 hw21x_3 hw21x_5 hw21x_7 hw21y_1 hw21y_3 hw21y_5 hw21y_7
+     hw21z_1 hw21z_3 hw21z_5 hw21z_7 hw23x_1 hw23x_3 hw23x_5 hw23x_7 hw23y_1 hw23y_3
+     hw23y_5 hw23y_7 hw23z_1 hw23z_3 hw23z_5 hw23z_7 hw22f hw22s hw22t hw22v hw22w
+     hw22a hw22x hw22y hw22z hw24x hw24y hw24z hw22f_1 hw22f_3 hw22f_5 hw22f_7
+     hw22s_1 hw22s_3 hw22s_5 hw22s_7 hw22t_1 hw22t_3 hw22t_5 hw22t_7 hw22v_1 hw22v_3
+     hw22v_5 hw22v_7 hw22w_1 hw22w_3 hw22w_5 hw22w_7 hw22a_1 hw22a_3 hw22a_5 hw22a_7
+     hw22x_1 hw22x_3 hw22x_5 hw22x_7 hw22y_1 hw22y_3 hw22y_5 hw22y_7 hw22z_1 hw22z_3
+     hw22z_5 hw22z_7 hw24x_1 hw24x_3 hw24x_5 hw24x_7 hw24y_1 hw24y_3 hw24y_5 hw24y_7
+     hw24z_1 hw24z_3 hw24z_5 hw24z_7 inc31f inc31s inc31t inc31v inc31w inc31a
+     inc31x inc31y inc31z inc33x inc33y inc33z inc31f_1 inc31f_3 inc31f_5 inc31f_7
+     inc31s_1 inc31s_3 inc31s_5 inc31s_7 inc31t_1 inc31t_3 inc31t_5 inc31t_7
+     inc31v_1 inc31v_3 inc31v_5 inc31v_7 inc31w_1 inc31w_3 inc31w_5 inc31w_7
+     inc31a_1 inc31a_3 inc31a_5 inc31a_7 inc31x_1 inc31x_3 inc31x_5 inc31x_7
+     inc31y_1 inc31y_3 inc31y_5 inc31y_7 inc31z_1 inc31z_3 inc31z_5 inc31z_7
+     inc33x_1 inc33x_3 inc33x_5 inc33x_7 inc33y_1 inc33y_3 inc33y_5 inc33y_7
+     inc33z_1 inc33z_3 inc33z_5 inc33z_7 inc32f inc32s inc32t inc32v inc32w inc32a
+     inc32x inc32y inc32z inc34x inc34y inc34z inc32f_1 inc32f_3 inc32f_5 inc32f_7
+     inc32s_1 inc32s_3 inc32s_5 inc32s_7 inc32t_1 inc32t_3 inc32t_5 inc32t_7
+     inc32v_1 inc32v_3 inc32v_5 inc32v_7 inc32w_1 inc32w_3 inc32w_5 inc32w_7
+     inc32a_1 inc32a_3 inc32a_5 inc32a_7 inc32x_1 inc32x_3 inc32x_5 inc32x_7
+     inc32y_1 inc32y_3 inc32y_5 inc32y_7 inc32z_1 inc32z_3 inc32z_5 inc32z_7
+     inc34x_1 inc34x_3 inc34x_5 inc34x_7 inc34y_1 inc34y_3 inc34y_5 inc34y_7
+     inc34z_1 inc34z_3 inc34z_5 inc34z_7 hw31f hw31s hw31t hw31v hw31w hw31a hw31x
+     hw31y hw31z hw33x hw33y hw33z hw31f_1 hw31f_3 hw31f_5 hw31f_7 hw31s_1 hw31s_3
+     hw31s_5 hw31s_7 hw31t_1 hw31t_3 hw31t_5 hw31t_7 hw31v_1 hw31v_3 hw31v_5 hw31v_7
+     hw31w_1 hw31w_3 hw31w_5 hw31w_7 hw31a_1 hw31a_3 hw31a_5 hw31a_7 hw31x_1 hw31x_3
+     hw31x_5 hw31x_7 hw31y_1 hw31y_3 hw31y_5 hw31y_7 hw31z_1 hw31z_3 hw31z_5 hw31z_7
+     hw33x_1 hw33x_3 hw33x_5 hw33x_7 hw33y_1 hw33y_3 hw33y_5 hw33y_7 hw33z_1 hw33z_3
+     hw33z_5 hw33z_7 hw32f hw32s hw32t hw32v hw32w hw32a hw32x hw32y hw32z hw34x
+     hw34y hw34z hw32f_1 hw32f_3 hw32f_5 hw32f_7 hw32s_1 hw32s_3 hw32s_5 hw32s_7
+     hw32t_1 hw32t_3 hw32t_5 hw32t_7 hw32v_1 hw32v_3 hw32v_5 hw32v_7 hw32w_1 hw32w_3
+     hw32w_5 hw32w_7 hw32a_1 hw32a_3 hw32a_5 hw32a_7 hw32x_1 hw32x_3 hw32x_5 hw32x_7
+     hw32y_1 hw32y_3 hw32y_5 hw32y_7 hw32z_1 hw32z_3 hw32z_5 hw32z_7 hw34x_1 hw34x_3
+     hw34x_5 hw34x_7 hw34y_1 hw34y_3 hw34y_5 hw34y_7 hw34z_1 hw34z_3 hw34z_5 hw34z_7
+     sex_t1 sex_t2 sex_t3 sex_t4 cd_t1 cd_t2 cd_t3 cd_t4 childcf childcs childct
+     childcv childcw childca childnf childns childnt childnv childnw childna dw_t1
+     dw_t2 dw_t3 dw_t4 dw_t12 dw_t13 dw_t22 dw_t23 dw_t32 dw_t33 dw_t42 dw_t43 dwf
+     dws dwt dwv dww dwa dwf1_2 dwf1_3 dws1_2 dws1_3 dwt1_2 dwt1_3 dwv1_2 dwv1_3
+     dww1_2 dww1_3 dwa1_2 dwa1_3 ag_t1 ag_t2 ag_t3 ag_t4 aage_t1 aage_t2 aage_t3
+     aage_t4 aedu_t1 aedu_t2 aedu_t3 aedu_t4 asiop_t1 asiop_t2 asiop_t3 asiop_t4
+     ainc_t1 ainc_t2 ainc_t3 ainc_t4 ahw_t1 ahw_t2 ahw_t3 ahw_t4 ainccf ainccs
+     aincct ainccv ainccw aincca ahwcf ahwcs ahwct ahwcv ahwcw ahwca aincnf aincns
+     aincnt aincnv aincnw aincna aincnf_1 aincnf_3 aincns_1 aincns_3 aincnt_1
+     aincnt_3 aincnv_1 aincnv_3 aincnw_1 aincnw_3 aincna_1 aincna_3 ahwnf ahwns
+     ahwnt ahwnv ahwnw ahwna ahwnf_1 ahwnf_3 ahwns_1 ahwns_3 ahwnt_1 ahwnt_3 ahwnv_1
+     ahwnv_3 ahwnw_1 ahwnw_3 ahwna_1 ahwna_3 ahk_t1 ahk_t2 ahk_t3 ahk_t4 ahknf ahkns
+     ahknt ahknv ahknw ahkna page_t1 page_t2 page_t3 page_t4 pagen_t1 pagen_t2
+     pagen_t3 pagen_t4 page_t12 page_t13 page_t14 page_t22 page_t23 page_t24
+     page_t32 page_t33 page_t34 page_t42 page_t43 page_t44 psex_t1 psex_t2 psex_t3
+     psex_t4 pmar_t1 pmar_t2 pmar_t3 pmar_t4 pmarnf pmarns pmarnt pmarnv pmarnw
+     pmarna pedu_t1 pedu_t2 pedu_t3 pedu_t4 pedu_t12 pedu_t13 pedu_t22 pedu_t23
+     pedu_t32 pedu_t33 pedu_t42 pedu_t43 phk_t1 phk_t2 phk_t3 phk_t4 pcor_t1 pcor_t2
+     pcor_t3 pcor_t4 pcornf pcorns pcornt pcornv pcornw pcorna ppart_t1 ppart_t2
+     ppart_t3 ppart_t4 finc_t1 finc_t2 finc_t3 finc_t4 finccf finccs fincct finccv
+     finccw fincca fincnf fincns fincnt fincnv fincnw fincna fincnf_1 fincnf_3
+     fincns_1 fincns_3 fincnt_1 fincnt_3 fincnv_1 fincnv_3 fincnw_1 fincnw_3
+     fincna_1 fincna_3 furb_t1 furb_t2 furb_t3 furb_t4 fprov_t1 fprov_t2 fprov_t3
+     fprov_t4 fpov_t11 fpov_t13 fpov_t21 fpov_t23 fpov_t31 fpov_t33 fpov_t41
+     fpov_t43 lft_t1 lft_t2 lft_t3 lft_t4 fcz_t1 fcz_t2 fcz_t3 fcz_t4 resp_t1
+     resp_t2 resp_t3 resp_t4 lifetime; 
+ MISSING=.;
+ usevar =  closz_t1 opp5z_t1 esupz_t1 isupz_t1
+closz_t2 opp5z_t2 esupz_t2 isupz_t2
+closz_t3 opp5z_t3 esupz_t3 isupz_t3
+closz_t4 opp5z_t4 esupz_t4 isupz_t4
+edwc_t1 idwc_t1
+edwc_t2 idwc_t2
+edwc_t3 idwc_t3
+edwc_t4 idwc_t4; ! Time1-3 have 4 continuous items. !
+
+categorical = edwc_t1 idwc_t1 edwc_t2 idwc_t2
+edwc_t3 idwc_t3 edwc_t4 idwc_t4;
+
+IDVARIABLE = pid;
+classes = c1(4) c2(4) c3(4) c4(4);
+DEFINE:
+edwc_t1 = 0;
+IF (edw_t1 LT esup_t1*1) THEN edwc_t1 = 1;
+
+idwc_t1 = 0;
+IF (idw_t1 LT isup_t1*1) THEN idwc_t1 = 1;
+
+edwc_t2 = 0;
+IF (edw_t2 LT esup_t2*1) THEN edwc_t2 = 1;
+
+idwc_t2 = 0;
+IF (idw_t2 LT isup_t2*1) THEN idwc_t2 = 1;
+    
+edwc_t3 = 0;
+IF (edw_t3 LT esup_t3*1) THEN edwc_t3 = 1;
+
+idwc_t3 = 0;
+IF (idw_t3 LT isup_t3*1) THEN idwc_t3 = 1;
+    
+edwc_t4 = 0;
+IF (edw_t4 LT esup_t4*1) THEN edwc_t4 = 1;
+
+idwc_t4 = 0;
+IF (idw_t4 LT isup_t4*1) THEN idwc_t4 = 1;
+ANALYSIS:
+! ALGORITHM = EM;
+ALGORITHM = integration; 
+! integration = 30; !
+estimator = mlr;
+type = mixture;
+starts = 600 200;
+LRTSTARTS = 20 5 100 25;
+processors = 16(starts);
+MODEL:
+%overall%
+      
+!!! (Can't cut off line) specify random intercept as continuous latent factor !!!      
+f1 by closz_t1-isupz_t1 edwc_t1 idwc_t1 *(p1-p6) 
+closz_t2-isupz_t2 edwc_t2 idwc_t2 *(p1-p6)
+closz_t3-isupz_t3 edwc_t3 idwc_t3 *(p1-p6)
+closz_t4-isupz_t4 edwc_t4 idwc_t4 *(p1-p6);
+f1@1; [f1@0]; !!! fix random intercept variance to 1 and mean to 0 !!!
+
+c2 on c1; !!! estimate all multinomial logistic regressions !!!
+c3 on c2;
+c4 on c3;
+!!! The above syntax can also be written as: !!!
+! c2#1 on c1#1 c1#2 c1#3; !
+! c2#2 on c1#1 c1#2 c1#3; !
+! c2#3 on c1#1 c1#2 c1#3; !
+
+MODEL c1: !!! the following syntax will allow item thresholds !!!
+!!! to be estimated for each class (e.g. invariance) !!!
+%c1#1%
+[closz_t1-isupz_t1] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t1$1 idwc_t1$1] (5-6);
+%c1#2%
+[closz_t1-isupz_t1] (7-10);
+[edwc_t1$1 idwc_t1$1] (11-12);
+%c1#3%
+[closz_t1-isupz_t1] (13-16);
+[edwc_t1$1 idwc_t1$1] (17-18);
+%c1#4%
+[closz_t1-isupz_t1] (19-22);
+[edwc_t1$1 idwc_t1$1] (23-24);
+
+MODEL c2:
+%c2#1%
+[closz_t2-isupz_t2] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t2$1 idwc_t2$1] (5-6);
+%c2#2%
+[closz_t2-isupz_t2] (7-10);
+[edwc_t2$1 idwc_t2$1] (11-12);
+%c2#3%
+[closz_t2-isupz_t2] (13-16);
+[edwc_t2$1 idwc_t2$1] (17-18);
+%c2#4%
+[closz_t2-isupz_t2] (19-22);
+[edwc_t2$1 idwc_t2$1] (23-24);
+
+MODEL c3:
+%c3#1%
+[closz_t3-isupz_t3] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t3$1 idwc_t3$1] (5-6);
+%c3#2%
+[closz_t3-isupz_t3] (7-10);
+[edwc_t3$1 idwc_t3$1] (11-12);
+%c3#3%
+[closz_t3-isupz_t3] (13-16);
+[edwc_t3$1 idwc_t3$1] (17-18);
+%c3#4%
+[closz_t3-isupz_t3] (19-22);
+[edwc_t3$1 idwc_t3$1] (23-24);
+    
+MODEL c4:
+%c4#1%
+[closz_t4-isupz_t4] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t4$1 idwc_t4$1] (5-6);
+%c4#2%
+[closz_t4-isupz_t4] (7-10);
+[edwc_t4$1 idwc_t4$1] (11-12);
+%c4#3%
+[closz_t4-isupz_t4] (13-16);
+[edwc_t4$1 idwc_t4$1] (17-18);
+%c4#4%
+[closz_t4-isupz_t4] (19-22);
+[edwc_t4$1 idwc_t4$1] (23-24);
+SAVEDATA:
+FILE = result_ri_lta_inv.txt;
+SAVE = CPROB;

@@ -1,0 +1,1786 @@
+Mplus VERSION 8.11
+MUTHEN & MUTHEN
+04/15/2025  12:25 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  RI-LTA (Invariant)
+  DATA:
+  FILE = "ri_ta.dat";
+
+  VARIABLE:
+  NAMES = pid closz_t1 closz_t2 closz_t3 closz_t4 clos_t1 clos_t2 clos_t3 clos_t4
+       esupz_t1 esupz_t2 esupz_t3 esupz_t4 esup_t1 esup_t2 esup_t3 esup_t4 edwz_t1
+       edwz_t2 edwz_t3 edwz_t4 edw_t1 edw_t2 edw_t3 edw_t4 isupz_t1 isupz_t2 isupz_t3
+       isupz_t4 isup_t1 isup_t2 isup_t3 isup_t4 idwz_t1 idwz_t2 idwz_t3 idwz_t4 idw_t1
+       idw_t2 idw_t3 idw_t4 meetz_t1 meetz_t2 meetz_t3 meetz_t4 meet_t1 meet_t2
+       meet_t3 meet_t4 contz_t1 contz_t2 contz_t3 contz_t4 cont_t1 cont_t2 cont_t3
+       cont_t4 oppz_t1 oppz_t2 oppz_t3 oppz_t4 opp_t1 opp_t2 opp_t3 opp_t4 opp5z_t1
+       opp5z_t2 opp5z_t3 opp5z_t4 opp5_t1 opp5_t2 opp5_t3 opp5_t4 opp5n_t1 opp5n_t2
+       opp5n_t3 opp5n_t4 agec_t1 agec_t2 agec_t3 agec_t4 educ_t1 educ_t2 educ_t3
+       educ_t4 siopc_t1 siopc_t2 siopc_t3 siopc_t4 age1_t1 age1_t2 age1_t3 age1_t4
+       age1_t11 age1_t13 age1_t21 age1_t23 age1_t31 age1_t33 age1_t41 age1_t43 edu1_t1
+       edu1_t2 edu1_t3 edu1_t4 edu1_t11 edu1_t13 edu1_t21 edu1_t23 edu1_t31 edu1_t33
+       edu1_t41 edu1_t43 siop1_t1 siop1_t2 siop1_t3 siop1_t4 sip1_t11 sip1_t13
+       sip1_t21 sip1_t23 sip1_t31 sip1_t33 sip1_t41 sip1_t43 age2_t1 age2_t2 age2_t3
+       age2_t4 age2_t11 age2_t13 age2_t21 age2_t23 age2_t31 age2_t33 age2_t41 age2_t43
+       edu2_t1 edu2_t2 edu2_t3 edu2_t4 edu2_t11 edu2_t13 edu2_t21 edu2_t23 edu2_t31
+       edu2_t33 edu2_t41 edu2_t43 siop2_t1 siop2_t2 siop2_t3 siop2_t4 sip2_t11
+       sip2_t13 sip2_t21 sip2_t23 sip2_t31 sip2_t33 sip2_t41 sip2_t43 age3_t1 age3_t2
+       age3_t3 age3_t4 age3_t11 age3_t13 age3_t21 age3_t23 age3_t31 age3_t33 age3_t41
+       age3_t43 edu3_t1 edu3_t2 edu3_t3 edu3_t4 edu3_t11 edu3_t13 edu3_t21 edu3_t23
+       edu3_t31 edu3_t33 edu3_t41 edu3_t43 siop3_t1 siop3_t2 siop3_t3 siop3_t4
+       sip3_t11 sip3_t13 sip3_t21 sip3_t23 sip3_t31 sip3_t33 sip3_t41 sip3_t43 incc_t1
+       incc_t2 incc_t3 incc_t4 hwc_t1 hwc_t2 hwc_t3 hwc_t4 inccf inccs incct inccv
+       inccw incca hwcf hwcs hwct hwcv hwcw hwca incnf incns incnt incnv incnw incna
+       hwnf hwns hwnt hwnv hwnw hwna inc1_t1 inc1_t2 inc1_t3 inc1_t4 inc2_t1 inc2_t2
+       inc2_t3 inc2_t4 inc3_t1 inc3_t2 inc3_t3 inc3_t4 inc1_t11 inc1_t13 inc1_t21
+       inc1_t23 inc1_t31 inc1_t33 inc1_t41 inc1_t43 inc2_t11 inc2_t13 inc2_t21
+       inc2_t23 inc2_t31 inc2_t33 inc2_t41 inc2_t43 inc3_t11 inc3_t13 inc3_t21
+       inc3_t23 inc3_t31 inc3_t33 inc3_t41 inc3_t43 hw1_t1 hw1_t2 hw1_t3 hw1_t4 hw2_t1
+       hw2_t2 hw2_t3 hw2_t4 hw3_t1 hw3_t2 hw3_t3 hw3_t4 hw1_t11 hw1_t13 hw1_t21
+       hw1_t23 hw1_t31 hw1_t33 hw1_t41 hw1_t43 hw2_t11 hw2_t13 hw2_t21 hw2_t23 hw2_t31
+       hw2_t33 hw2_t41 hw2_t43 hw3_t11 hw3_t13 hw3_t21 hw3_t23 hw3_t31 hw3_t33 hw3_t41
+       hw3_t43 inc11f inc11s inc11t inc11v inc11w inc11a inc11x inc11y inc11z inc13x
+       inc13y inc13z inc11f_1 inc11f_3 inc11f_5 inc11f_7 inc11s_1 inc11s_3 inc11s_5
+       inc11s_7 inc11t_1 inc11t_3 inc11t_5 inc11t_7 inc11v_1 inc11v_3 inc11v_5
+       inc11v_7 inc11w_1 inc11w_3 inc11w_5 inc11w_7 inc11a_1 inc11a_3 inc11a_5
+       inc11a_7 inc11x_1 inc11x_3 inc11x_5 inc11x_7 inc11y_1 inc11y_3 inc11y_5
+       inc11y_7 inc11z_1 inc11z_3 inc11z_5 inc11z_7 inc13x_1 inc13x_3 inc13x_5
+       inc13x_7 inc13y_1 inc13y_3 inc13y_5 inc13y_7 inc13z_1 inc13z_3 inc13z_5
+       inc13z_7 inc12f inc12s inc12t inc12v inc12w inc12a inc12x inc12y inc12z inc14x
+       inc14y inc14z inc12f_1 inc12f_3 inc12f_5 inc12f_7 inc12s_1 inc12s_3 inc12s_5
+       inc12s_7 inc12t_1 inc12t_3 inc12t_5 inc12t_7 inc12v_1 inc12v_3 inc12v_5
+       inc12v_7 inc12w_1 inc12w_3 inc12w_5 inc12w_7 inc12a_1 inc12a_3 inc12a_5
+       inc12a_7 inc12x_1 inc12x_3 inc12x_5 inc12x_7 inc12y_1 inc12y_3 inc12y_5
+       inc12y_7 inc12z_1 inc12z_3 inc12z_5 inc12z_7 inc14x_1 inc14x_3 inc14x_5
+       inc14x_7 inc14y_1 inc14y_3 inc14y_5 inc14y_7 inc14z_1 inc14z_3 inc14z_5
+       inc14z_7 hw11f hw11s hw11t hw11v hw11w hw11a hw11x hw11y hw11z hw13x hw13y
+       hw13z hw11f_1 hw11f_3 hw11f_5 hw11f_7 hw11s_1 hw11s_3 hw11s_5 hw11s_7 hw11t_1
+       hw11t_3 hw11t_5 hw11t_7 hw11v_1 hw11v_3 hw11v_5 hw11v_7 hw11w_1 hw11w_3 hw11w_5
+       hw11w_7 hw11a_1 hw11a_3 hw11a_5 hw11a_7 hw11x_1 hw11x_3 hw11x_5 hw11x_7 hw11y_1
+       hw11y_3 hw11y_5 hw11y_7 hw11z_1 hw11z_3 hw11z_5 hw11z_7 hw13x_1 hw13x_3 hw13x_5
+       hw13x_7 hw13y_1 hw13y_3 hw13y_5 hw13y_7 hw13z_1 hw13z_3 hw13z_5 hw13z_7 hw12f
+       hw12s hw12t hw12v hw12w hw12a hw12x hw12y hw12z hw14x hw14y hw14z hw12f_1
+       hw12f_3 hw12f_5 hw12f_7 hw12s_1 hw12s_3 hw12s_5 hw12s_7 hw12t_1 hw12t_3 hw12t_5
+       hw12t_7 hw12v_1 hw12v_3 hw12v_5 hw12v_7 hw12w_1 hw12w_3 hw12w_5 hw12w_7 hw12a_1
+       hw12a_3 hw12a_5 hw12a_7 hw12x_1 hw12x_3 hw12x_5 hw12x_7 hw12y_1 hw12y_3 hw12y_5
+       hw12y_7 hw12z_1 hw12z_3 hw12z_5 hw12z_7 hw14x_1 hw14x_3 hw14x_5 hw14x_7 hw14y_1
+       hw14y_3 hw14y_5 hw14y_7 hw14z_1 hw14z_3 hw14z_5 hw14z_7 inc21f inc21s inc21t
+       inc21v inc21w inc21a inc21x inc21y inc21z inc23x inc23y inc23z inc21f_1
+       inc21f_3 inc21f_5 inc21f_7 inc21s_1 inc21s_3 inc21s_5 inc21s_7 inc21t_1
+       inc21t_3 inc21t_5 inc21t_7 inc21v_1 inc21v_3 inc21v_5 inc21v_7 inc21w_1
+       inc21w_3 inc21w_5 inc21w_7 inc21a_1 inc21a_3 inc21a_5 inc21a_7 inc21x_1
+       inc21x_3 inc21x_5 inc21x_7 inc21y_1 inc21y_3 inc21y_5 inc21y_7 inc21z_1
+       inc21z_3 inc21z_5 inc21z_7 inc23x_1 inc23x_3 inc23x_5 inc23x_7 inc23y_1
+       inc23y_3 inc23y_5 inc23y_7 inc23z_1 inc23z_3 inc23z_5 inc23z_7 inc22f inc22s
+       inc22t inc22v inc22w inc22a inc22x inc22y inc22z inc24x inc24y inc24z inc22f_1
+       inc22f_3 inc22f_5 inc22f_7 inc22s_1 inc22s_3 inc22s_5 inc22s_7 inc22t_1
+       inc22t_3 inc22t_5 inc22t_7 inc22v_1 inc22v_3 inc22v_5 inc22v_7 inc22w_1
+       inc22w_3 inc22w_5 inc22w_7 inc22a_1 inc22a_3 inc22a_5 inc22a_7 inc22x_1
+       inc22x_3 inc22x_5 inc22x_7 inc22y_1 inc22y_3 inc22y_5 inc22y_7 inc22z_1
+       inc22z_3 inc22z_5 inc22z_7 inc24x_1 inc24x_3 inc24x_5 inc24x_7 inc24y_1
+       inc24y_3 inc24y_5 inc24y_7 inc24z_1 inc24z_3 inc24z_5 inc24z_7 hw21f hw21s
+       hw21t hw21v hw21w hw21a hw21x hw21y hw21z hw23x hw23y hw23z hw21f_1 hw21f_3
+       hw21f_5 hw21f_7 hw21s_1 hw21s_3 hw21s_5 hw21s_7 hw21t_1 hw21t_3 hw21t_5 hw21t_7
+       hw21v_1 hw21v_3 hw21v_5 hw21v_7 hw21w_1 hw21w_3 hw21w_5 hw21w_7 hw21a_1 hw21a_3
+       hw21a_5 hw21a_7 hw21x_1 hw21x_3 hw21x_5 hw21x_7 hw21y_1 hw21y_3 hw21y_5 hw21y_7
+       hw21z_1 hw21z_3 hw21z_5 hw21z_7 hw23x_1 hw23x_3 hw23x_5 hw23x_7 hw23y_1 hw23y_3
+       hw23y_5 hw23y_7 hw23z_1 hw23z_3 hw23z_5 hw23z_7 hw22f hw22s hw22t hw22v hw22w
+       hw22a hw22x hw22y hw22z hw24x hw24y hw24z hw22f_1 hw22f_3 hw22f_5 hw22f_7
+       hw22s_1 hw22s_3 hw22s_5 hw22s_7 hw22t_1 hw22t_3 hw22t_5 hw22t_7 hw22v_1 hw22v_3
+       hw22v_5 hw22v_7 hw22w_1 hw22w_3 hw22w_5 hw22w_7 hw22a_1 hw22a_3 hw22a_5 hw22a_7
+       hw22x_1 hw22x_3 hw22x_5 hw22x_7 hw22y_1 hw22y_3 hw22y_5 hw22y_7 hw22z_1 hw22z_3
+       hw22z_5 hw22z_7 hw24x_1 hw24x_3 hw24x_5 hw24x_7 hw24y_1 hw24y_3 hw24y_5 hw24y_7
+       hw24z_1 hw24z_3 hw24z_5 hw24z_7 inc31f inc31s inc31t inc31v inc31w inc31a
+       inc31x inc31y inc31z inc33x inc33y inc33z inc31f_1 inc31f_3 inc31f_5 inc31f_7
+       inc31s_1 inc31s_3 inc31s_5 inc31s_7 inc31t_1 inc31t_3 inc31t_5 inc31t_7
+       inc31v_1 inc31v_3 inc31v_5 inc31v_7 inc31w_1 inc31w_3 inc31w_5 inc31w_7
+       inc31a_1 inc31a_3 inc31a_5 inc31a_7 inc31x_1 inc31x_3 inc31x_5 inc31x_7
+       inc31y_1 inc31y_3 inc31y_5 inc31y_7 inc31z_1 inc31z_3 inc31z_5 inc31z_7
+       inc33x_1 inc33x_3 inc33x_5 inc33x_7 inc33y_1 inc33y_3 inc33y_5 inc33y_7
+       inc33z_1 inc33z_3 inc33z_5 inc33z_7 inc32f inc32s inc32t inc32v inc32w inc32a
+       inc32x inc32y inc32z inc34x inc34y inc34z inc32f_1 inc32f_3 inc32f_5 inc32f_7
+       inc32s_1 inc32s_3 inc32s_5 inc32s_7 inc32t_1 inc32t_3 inc32t_5 inc32t_7
+       inc32v_1 inc32v_3 inc32v_5 inc32v_7 inc32w_1 inc32w_3 inc32w_5 inc32w_7
+       inc32a_1 inc32a_3 inc32a_5 inc32a_7 inc32x_1 inc32x_3 inc32x_5 inc32x_7
+       inc32y_1 inc32y_3 inc32y_5 inc32y_7 inc32z_1 inc32z_3 inc32z_5 inc32z_7
+       inc34x_1 inc34x_3 inc34x_5 inc34x_7 inc34y_1 inc34y_3 inc34y_5 inc34y_7
+       inc34z_1 inc34z_3 inc34z_5 inc34z_7 hw31f hw31s hw31t hw31v hw31w hw31a hw31x
+       hw31y hw31z hw33x hw33y hw33z hw31f_1 hw31f_3 hw31f_5 hw31f_7 hw31s_1 hw31s_3
+       hw31s_5 hw31s_7 hw31t_1 hw31t_3 hw31t_5 hw31t_7 hw31v_1 hw31v_3 hw31v_5 hw31v_7
+       hw31w_1 hw31w_3 hw31w_5 hw31w_7 hw31a_1 hw31a_3 hw31a_5 hw31a_7 hw31x_1 hw31x_3
+       hw31x_5 hw31x_7 hw31y_1 hw31y_3 hw31y_5 hw31y_7 hw31z_1 hw31z_3 hw31z_5 hw31z_7
+       hw33x_1 hw33x_3 hw33x_5 hw33x_7 hw33y_1 hw33y_3 hw33y_5 hw33y_7 hw33z_1 hw33z_3
+       hw33z_5 hw33z_7 hw32f hw32s hw32t hw32v hw32w hw32a hw32x hw32y hw32z hw34x
+       hw34y hw34z hw32f_1 hw32f_3 hw32f_5 hw32f_7 hw32s_1 hw32s_3 hw32s_5 hw32s_7
+       hw32t_1 hw32t_3 hw32t_5 hw32t_7 hw32v_1 hw32v_3 hw32v_5 hw32v_7 hw32w_1 hw32w_3
+       hw32w_5 hw32w_7 hw32a_1 hw32a_3 hw32a_5 hw32a_7 hw32x_1 hw32x_3 hw32x_5 hw32x_7
+       hw32y_1 hw32y_3 hw32y_5 hw32y_7 hw32z_1 hw32z_3 hw32z_5 hw32z_7 hw34x_1 hw34x_3
+       hw34x_5 hw34x_7 hw34y_1 hw34y_3 hw34y_5 hw34y_7 hw34z_1 hw34z_3 hw34z_5 hw34z_7
+       sex_t1 sex_t2 sex_t3 sex_t4 cd_t1 cd_t2 cd_t3 cd_t4 childcf childcs childct
+       childcv childcw childca childnf childns childnt childnv childnw childna dw_t1
+       dw_t2 dw_t3 dw_t4 dw_t12 dw_t13 dw_t22 dw_t23 dw_t32 dw_t33 dw_t42 dw_t43 dwf
+       dws dwt dwv dww dwa dwf1_2 dwf1_3 dws1_2 dws1_3 dwt1_2 dwt1_3 dwv1_2 dwv1_3
+       dww1_2 dww1_3 dwa1_2 dwa1_3 ag_t1 ag_t2 ag_t3 ag_t4 aage_t1 aage_t2 aage_t3
+       aage_t4 aedu_t1 aedu_t2 aedu_t3 aedu_t4 asiop_t1 asiop_t2 asiop_t3 asiop_t4
+       ainc_t1 ainc_t2 ainc_t3 ainc_t4 ahw_t1 ahw_t2 ahw_t3 ahw_t4 ainccf ainccs
+       aincct ainccv ainccw aincca ahwcf ahwcs ahwct ahwcv ahwcw ahwca aincnf aincns
+       aincnt aincnv aincnw aincna aincnf_1 aincnf_3 aincns_1 aincns_3 aincnt_1
+       aincnt_3 aincnv_1 aincnv_3 aincnw_1 aincnw_3 aincna_1 aincna_3 ahwnf ahwns
+       ahwnt ahwnv ahwnw ahwna ahwnf_1 ahwnf_3 ahwns_1 ahwns_3 ahwnt_1 ahwnt_3 ahwnv_1
+       ahwnv_3 ahwnw_1 ahwnw_3 ahwna_1 ahwna_3 ahk_t1 ahk_t2 ahk_t3 ahk_t4 ahknf ahkns
+       ahknt ahknv ahknw ahkna page_t1 page_t2 page_t3 page_t4 pagen_t1 pagen_t2
+       pagen_t3 pagen_t4 page_t12 page_t13 page_t14 page_t22 page_t23 page_t24
+       page_t32 page_t33 page_t34 page_t42 page_t43 page_t44 psex_t1 psex_t2 psex_t3
+       psex_t4 pmar_t1 pmar_t2 pmar_t3 pmar_t4 pmarnf pmarns pmarnt pmarnv pmarnw
+       pmarna pedu_t1 pedu_t2 pedu_t3 pedu_t4 pedu_t12 pedu_t13 pedu_t22 pedu_t23
+       pedu_t32 pedu_t33 pedu_t42 pedu_t43 phk_t1 phk_t2 phk_t3 phk_t4 pcor_t1 pcor_t2
+       pcor_t3 pcor_t4 pcornf pcorns pcornt pcornv pcornw pcorna ppart_t1 ppart_t2
+       ppart_t3 ppart_t4 finc_t1 finc_t2 finc_t3 finc_t4 finccf finccs fincct finccv
+       finccw fincca fincnf fincns fincnt fincnv fincnw fincna fincnf_1 fincnf_3
+       fincns_1 fincns_3 fincnt_1 fincnt_3 fincnv_1 fincnv_3 fincnw_1 fincnw_3
+       fincna_1 fincna_3 furb_t1 furb_t2 furb_t3 furb_t4 fprov_t1 fprov_t2 fprov_t3
+       fprov_t4 fpov_t11 fpov_t13 fpov_t21 fpov_t23 fpov_t31 fpov_t33 fpov_t41
+       fpov_t43 lft_t1 lft_t2 lft_t3 lft_t4 fcz_t1 fcz_t2 fcz_t3 fcz_t4 resp_t1
+       resp_t2 resp_t3 resp_t4 lifetime;
+   MISSING=.;
+   usevar =  closz_t1 opp5z_t1 esupz_t1 isupz_t1
+  closz_t2 opp5z_t2 esupz_t2 isupz_t2
+  closz_t3 opp5z_t3 esupz_t3 isupz_t3
+  closz_t4 opp5z_t4 esupz_t4 isupz_t4
+  edwc_t1 idwc_t1
+  edwc_t2 idwc_t2
+  edwc_t3 idwc_t3
+  edwc_t4 idwc_t4; ! Time1-3 have 4 continuous items. !
+
+  categorical = edwc_t1 idwc_t1 edwc_t2 idwc_t2
+  edwc_t3 idwc_t3 edwc_t4 idwc_t4;
+
+  IDVARIABLE = pid;
+  classes = c1(4) c2(4) c3(4) c4(4);
+  DEFINE:
+  edwc_t1 = 0;
+  IF (edw_t1 LT esup_t1*1) THEN edwc_t1 = 1;
+
+  idwc_t1 = 0;
+  IF (idw_t1 LT isup_t1*1) THEN idwc_t1 = 1;
+
+  edwc_t2 = 0;
+  IF (edw_t2 LT esup_t2*1) THEN edwc_t2 = 1;
+
+  idwc_t2 = 0;
+  IF (idw_t2 LT isup_t2*1) THEN idwc_t2 = 1;
+
+  edwc_t3 = 0;
+  IF (edw_t3 LT esup_t3*1) THEN edwc_t3 = 1;
+
+  idwc_t3 = 0;
+  IF (idw_t3 LT isup_t3*1) THEN idwc_t3 = 1;
+
+  edwc_t4 = 0;
+  IF (edw_t4 LT esup_t4*1) THEN edwc_t4 = 1;
+
+  idwc_t4 = 0;
+  IF (idw_t4 LT isup_t4*1) THEN idwc_t4 = 1;
+  ANALYSIS:
+  ! ALGORITHM = EM;
+  ALGORITHM = integration;
+  ! integration = 30; !
+  estimator = mlr;
+  type = mixture;
+  starts = 600 200;
+  LRTSTARTS = 20 5 100 25;
+  processors = 16(starts);
+  MODEL:
+  %overall%
+
+  !!! (Can't cut off line) specify random intercept as continuous latent factor !!!
+  f1 by closz_t1-isupz_t1 edwc_t1 idwc_t1 *(p1-p6)
+  closz_t2-isupz_t2 edwc_t2 idwc_t2 *(p1-p6)
+  closz_t3-isupz_t3 edwc_t3 idwc_t3 *(p1-p6)
+  closz_t4-isupz_t4 edwc_t4 idwc_t4 *(p1-p6);
+  f1@1; [f1@0]; !!! fix random intercept variance to 1 and mean to 0 !!!
+
+  c2 on c1; !!! estimate all multinomial logistic regressions !!!
+  c3 on c2;
+  c4 on c3;
+  !!! The above syntax can also be written as: !!!
+  ! c2#1 on c1#1 c1#2 c1#3; !
+  ! c2#2 on c1#1 c1#2 c1#3; !
+  ! c2#3 on c1#1 c1#2 c1#3; !
+
+  MODEL c1: !!! the following syntax will allow item thresholds !!!
+  !!! to be estimated for each class (e.g. invariance) !!!
+  %c1#1%
+  [closz_t1-isupz_t1] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t1$1 idwc_t1$1] (5-6);
+  %c1#2%
+  [closz_t1-isupz_t1] (7-10);
+  [edwc_t1$1 idwc_t1$1] (11-12);
+  %c1#3%
+  [closz_t1-isupz_t1] (13-16);
+  [edwc_t1$1 idwc_t1$1] (17-18);
+  %c1#4%
+  [closz_t1-isupz_t1] (19-22);
+  [edwc_t1$1 idwc_t1$1] (23-24);
+
+  MODEL c2:
+  %c2#1%
+  [closz_t2-isupz_t2] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t2$1 idwc_t2$1] (5-6);
+  %c2#2%
+  [closz_t2-isupz_t2] (7-10);
+  [edwc_t2$1 idwc_t2$1] (11-12);
+  %c2#3%
+  [closz_t2-isupz_t2] (13-16);
+  [edwc_t2$1 idwc_t2$1] (17-18);
+  %c2#4%
+  [closz_t2-isupz_t2] (19-22);
+  [edwc_t2$1 idwc_t2$1] (23-24);
+
+  MODEL c3:
+  %c3#1%
+  [closz_t3-isupz_t3] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t3$1 idwc_t3$1] (5-6);
+  %c3#2%
+  [closz_t3-isupz_t3] (7-10);
+  [edwc_t3$1 idwc_t3$1] (11-12);
+  %c3#3%
+  [closz_t3-isupz_t3] (13-16);
+  [edwc_t3$1 idwc_t3$1] (17-18);
+  %c3#4%
+  [closz_t3-isupz_t3] (19-22);
+  [edwc_t3$1 idwc_t3$1] (23-24);
+
+  MODEL c4:
+  %c4#1%
+  [closz_t4-isupz_t4] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t4$1 idwc_t4$1] (5-6);
+  %c4#2%
+  [closz_t4-isupz_t4] (7-10);
+  [edwc_t4$1 idwc_t4$1] (11-12);
+  %c4#3%
+  [closz_t4-isupz_t4] (13-16);
+  [edwc_t4$1 idwc_t4$1] (17-18);
+  %c4#4%
+  [closz_t4-isupz_t4] (19-22);
+  [edwc_t4$1 idwc_t4$1] (23-24);
+  SAVEDATA:
+  FILE = result_ri_lta_inv.txt;
+  SAVE = CPROB;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+RI-LTA (Invariant)
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        3586
+
+Number of dependent variables                                   24
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+Number of categorical latent variables                           4
+
+Observed dependent variables
+
+  Continuous
+   CLOSZ_T1    OPP5Z_T1    ESUPZ_T1    ISUPZ_T1    CLOSZ_T2    OPP5Z_T2
+   ESUPZ_T2    ISUPZ_T2    CLOSZ_T3    OPP5Z_T3    ESUPZ_T3    ISUPZ_T3
+   CLOSZ_T4    OPP5Z_T4    ESUPZ_T4    ISUPZ_T4
+
+  Binary and ordered categorical (ordinal)
+   EDWC_T1     IDWC_T1     EDWC_T2     IDWC_T2     EDWC_T3     IDWC_T3
+   EDWC_T4     IDWC_T4
+
+Continuous latent variables
+   F1
+
+Categorical latent variables
+   C1          C2          C3          C4
+
+Variables with special functions
+
+  ID variable           PID
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-02
+    Relative loglikelihood change                        0.100D-05
+    Derivative                                           0.100D-02
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-02
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-02
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+Integration Specifications
+  Type                                                    STANDARD
+  Number of integration points                                  15
+  Dimensions of numerical integration                            1
+  Adaptive quadrature                                           ON
+Random Starts Specifications
+  Number of initial stage random starts                        600
+  Number of final stage optimizations                          200
+  Number of initial stage iterations                            10
+  Initial stage convergence criterion                    0.100D+01
+  Random starts scale                                    0.500D+01
+  Random seed for generating random starts                       0
+Parameterization                                             LOGIT
+Link                                                         LOGIT
+Cholesky                                                       OFF
+
+Input data file(s)
+  ri_ta.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+     Number of y missing data patterns           1
+     Number of u missing data patterns           1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR Y
+
+
+           Covariance Coverage
+              CLOSZ_T1      OPP5Z_T1      ESUPZ_T1      ISUPZ_T1      CLOSZ_T2
+              ________      ________      ________      ________      ________
+ CLOSZ_T1       1.000
+ OPP5Z_T1       1.000         1.000
+ ESUPZ_T1       1.000         1.000         1.000
+ ISUPZ_T1       1.000         1.000         1.000         1.000
+ CLOSZ_T2       1.000         1.000         1.000         1.000         1.000
+ OPP5Z_T2       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T2       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T2       1.000         1.000         1.000         1.000         1.000
+ CLOSZ_T3       1.000         1.000         1.000         1.000         1.000
+ OPP5Z_T3       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T3       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T3       1.000         1.000         1.000         1.000         1.000
+ CLOSZ_T4       1.000         1.000         1.000         1.000         1.000
+ OPP5Z_T4       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T4       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T4       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T3      OPP5Z_T3
+              ________      ________      ________      ________      ________
+ OPP5Z_T2       1.000
+ ESUPZ_T2       1.000         1.000
+ ISUPZ_T2       1.000         1.000         1.000
+ CLOSZ_T3       1.000         1.000         1.000         1.000
+ OPP5Z_T3       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T3       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T3       1.000         1.000         1.000         1.000         1.000
+ CLOSZ_T4       1.000         1.000         1.000         1.000         1.000
+ OPP5Z_T4       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T4       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T4       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ESUPZ_T3      ISUPZ_T3      CLOSZ_T4      OPP5Z_T4      ESUPZ_T4
+              ________      ________      ________      ________      ________
+ ESUPZ_T3       1.000
+ ISUPZ_T3       1.000         1.000
+ CLOSZ_T4       1.000         1.000         1.000
+ OPP5Z_T4       1.000         1.000         1.000         1.000
+ ESUPZ_T4       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T4       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ISUPZ_T4
+              ________
+ ISUPZ_T4       1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    EDWC_T1
+      Category 1    0.652         2339.000
+      Category 2    0.348         1247.000
+    IDWC_T1
+      Category 1    0.837         3001.000
+      Category 2    0.163          585.000
+    EDWC_T2
+      Category 1    0.623         2234.000
+      Category 2    0.377         1352.000
+    IDWC_T2
+      Category 1    0.818         2932.000
+      Category 2    0.182          654.000
+    EDWC_T3
+      Category 1    0.584         2096.000
+      Category 2    0.416         1490.000
+    IDWC_T3
+      Category 1    0.760         2725.000
+      Category 2    0.240          861.000
+    EDWC_T4
+      Category 1    0.569         2040.000
+      Category 2    0.431         1546.000
+    IDWC_T4
+      Category 1    0.735         2637.000
+      Category 2    0.265          949.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     CLOSZ_T1              5.000      -0.710       0.462    0.17%       4.583      4.583      4.583
+            3586.000       1.000      -0.054       5.956   45.34%       5.956      5.956
+     OPP5Z_T1              5.000      -0.684       2.161    2.18%       4.065      5.017      5.017
+            3586.000       1.000      -0.342       5.969   42.55%       5.969      5.969
+     ESUPZ_T1              5.000       0.621       4.223   60.90%       4.223      4.223      4.223
+            3586.000       1.000      -1.390       7.573    0.08%       4.223      6.227
+     ISUPZ_T1              5.000       1.316       4.400   69.58%       4.400      4.400      4.400
+            3586.000       1.000       0.123       7.256    9.68%       4.400      5.828
+     CLOSZ_T2              5.000      -0.748       0.544    0.17%       4.587      4.587      4.587
+            3586.000       1.000      -0.051       5.935   46.43%       5.935      5.935
+     OPP5Z_T2              5.000      -0.625       2.172    2.12%       4.086      5.043      5.043
+            3586.000       1.000      -0.406       6.000   40.99%       6.000      6.000
+     ESUPZ_T2              5.000       0.523       4.183   58.42%       4.183      4.183      4.183
+            3586.000       1.000      -1.502       7.333    0.20%       5.446      6.140
+     ISUPZ_T2              5.000       1.117       4.344   65.56%       4.344      4.344      4.344
+            3586.000       1.000      -0.380       7.110   10.09%       4.344      6.188
+     CLOSZ_T3              5.000      -0.912       0.721    0.25%       4.560      4.560      5.840
+            3586.000       1.000       0.107       5.840   52.04%       5.840      5.840
+     OPP5Z_T3              5.000      -0.663       2.091    2.06%       4.052      5.033      5.033
+            3586.000       1.000      -0.238       6.014   39.46%       5.033      6.014
+     ESUPZ_T3              5.000       0.336       4.111   54.52%       4.111      4.111      4.111
+            3586.000       1.000      -1.688       7.185    0.11%       5.762      6.160
+     ISUPZ_T3              5.000       0.891       4.274   61.13%       4.274      4.274      4.274
+            3586.000       1.000      -0.846       6.950   10.96%       4.274      6.058
+     CLOSZ_T4              5.000      -0.900       0.687    0.31%       4.558      4.558      5.848
+            3586.000       1.000       0.150       5.848   51.62%       5.848      5.848
+     OPP5Z_T4              5.000      -0.643       2.080    1.92%       4.055      5.043      5.043
+            3586.000       1.000      -0.261       6.031   38.43%       5.043      6.031
+     ESUPZ_T4              5.000       0.278       4.084   52.96%       4.084      4.084      4.084
+            3586.000       1.000      -1.722       7.181    0.08%       5.700      6.092
+     ISUPZ_T4              5.000       0.838       4.258   60.23%       4.258      4.258      4.258
+            3586.000       1.000      -0.946       6.910   11.21%       4.258      6.026
+
+RANDOM STARTS RESULTS RANKED FROM THE BEST TO THE WORST LOGLIKELIHOOD VALUES
+
+Final stage loglikelihood values at local maxima, seeds, and initial stage start numbers:
+
+          -65385.006  281558           184
+          -65385.006  197223           332
+          -65385.006  617243           237
+          -65385.006  848969           173
+          -65385.006  769907           457
+          -65385.007  761633           50
+          -65385.007  73576            213
+          -65385.007  85734            411
+          -65385.007  722748           346
+          -65385.007  282464           283
+          -65385.008  215353           164
+          -65385.008  369602           146
+          -65385.008  794236           127
+          -65385.008  798839           312
+          -65385.008  922042           492
+          -65385.008  857799           315
+          -65385.008  512836           289
+          -65385.008  655497           376
+          -65385.008  379729           512
+          -65385.008  923437           398
+          -65385.008  124999           96
+          -65385.008  113138           585
+          -65385.008  358074           560
+          -65385.008  673496           218
+          -65385.008  170118           238
+          -65385.008  772131           407
+          -65385.008  7959             256
+          -65385.008  156536           245
+          -65385.008  830292           527
+          -65385.008  650371           14
+          -65385.008  963053           43
+          -65385.008  405079           68
+          -65385.008  629320           222
+          -65385.008  945065           255
+          -65385.008  902278           21
+          -65385.008  352277           42
+          -65385.008  569131           26
+          -65385.008  922596           456
+          -65385.008  992389           77
+          -65385.008  595153           230
+          -65385.008  789985           67
+          -65385.008  850545           357
+          -65385.008  212934           568
+          -65385.008  930323           267
+          -65385.008  782200           84
+          -65385.008  185071           370
+          -65385.008  195873           6
+          -65385.008  194143           510
+          -65385.008  741888           138
+          -65385.008  260601           36
+          -65385.008  638611           524
+          -65385.008  752769           253
+          -65407.073  378393           509
+          -65687.040  749453           33
+          -65687.041  476498           179
+          -65687.041  301180           236
+          -65687.041  608460           244
+          -65687.041  443442           380
+          -65687.042  160326           546
+          -65687.042  606576           151
+          -65687.042  903369           134
+          -65687.042  153394           429
+          -65687.042  345726           461
+          -65687.042  605161           409
+          -65687.042  967237           48
+          -65687.042  529455           268
+          -65687.042  466971           109
+          -65687.042  644297           340
+          -65687.042  411615           171
+          -65687.042  505244           582
+          -68196.240  207896           25
+          -69585.949  793487           595
+          -69585.949  354624           448
+          -69585.949  579995           183
+          -69585.949  766903           505
+          -69585.949  745972           521
+          -69585.949  887676           22
+          -69585.949  12477            155
+          -69585.949  39136            226
+          -69585.950  383986           159
+          -69585.950  281462           285
+          -69585.950  529496           343
+          -69585.950  568859           49
+          -69585.951  760878           249
+          -69585.952  27071            15
+          -69585.952  252346           528
+          -69585.952  232226           235
+          -69585.952  93468            3
+          -69585.952  264081           186
+          -69813.487  823392           479
+          -69813.487  391949           295
+          -69813.487  824126           287
+          -69813.487  68850            462
+          -69813.487  988761           475
+          -69813.487  267983           228
+          -69813.488  848331           137
+          -69813.488  349562           359
+          -69813.489  283492           435
+          -69813.489  576596           99
+          -69813.489  972873           157
+          -69813.489  268217           83
+          -69813.489  685657           69
+          -69813.489  278692           342
+          -69813.489  188640           451
+          -69813.489  347222           533
+          -69813.489  165853           105
+          -69813.489  371246           101
+          -69813.489  354208           196
+          -69813.489  535804           111
+          -69813.489  404426           344
+          -69813.489  97158            205
+          -69813.489  637095           207
+          -69813.489  561664           392
+          -70013.910  491970           563
+          -70084.205  152496           123
+          -70173.469  544048           87
+          -70173.470  21132            351
+          -70173.471  497522           502
+          -70188.639  573096           20
+          -70406.298  392766           331
+          -70751.664  700349           401
+          -71143.021  576220           115
+          -71279.381  211281           292
+          -71397.653  432148           30
+          -72125.154  871438           561
+          -72125.154  107446           12
+          -72125.155  434915           552
+          -72125.155  872743           374
+          -72125.155  376411           473
+          -72125.155  836515           341
+          -72125.155  970689           266
+          -72125.155  514326           325
+          -72125.155  652266           490
+          -72406.785  81117            305
+          -72407.172  654136           167
+          -72478.438  216565           474
+          -72522.953  399380           436
+          -72522.954  438144           271
+          -72522.954  192071           142
+          -72522.964  416463           467
+          -72522.967  616917           261
+          -72522.968  669634           335
+          -72522.972  342019           301
+          -72530.503  227563           63
+          -72530.506  636396           168
+          -72530.511  714997           399
+
+54 perturbed starting value run(s) did not converge or were rejected in the third stage.
+
+
+
+THE BEST LOGLIKELIHOOD VALUE HAS BEEN REPLICATED.  RERUN WITH AT LEAST TWICE THE
+RANDOM STARTS TO CHECK THAT THE BEST LOGLIKELIHOOD IS STILL OBTAINED AND REPLICATED.
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       85
+
+Loglikelihood
+
+          H0 Value                      -65385.006
+          H0 Scaling Correction Factor      1.3944
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                  130940.012
+          Bayesian (BIC)                131465.719
+          Sample-Size Adjusted BIC      131195.632
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes
+
+          Pearson Chi-Square
+
+          Value                            898.259
+          Degrees of Freedom                   170
+          P-Value                           0.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                            917.678
+          Degrees of Freedom                   170
+          P-Value                           0.0000
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR EACH LATENT CLASS VARIABLE
+BASED ON THE ESTIMATED MODEL
+
+  Latent Class
+    Variable    Class
+
+    C1             1       469.92462          0.13104
+                   2       884.87061          0.24676
+                   3      1719.07190          0.47938
+                   4       512.13251          0.14281
+    C2             1       509.36307          0.14204
+                   2       895.35388          0.24968
+                   3      1593.92322          0.44449
+                   4       587.35938          0.16379
+    C3             1       541.50903          0.15101
+                   2       936.55194          0.26117
+                   3      1415.42358          0.39471
+                   4       692.51520          0.19312
+    C4             1       486.47516          0.13566
+                   2       893.36658          0.24913
+                   3      1420.33521          0.39608
+                   4       785.82288          0.21914
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.988
+
+
+LATENT CLASS INDICATOR MEANS AND PROBABILITIES FOR EACH LATENT CLASS
+
+     MEAN/PROBABILITY PROFILES FOR C1
+                       Latent class
+                     1      2      3      4
+     EDWC_T1
+       Category 1  0.998  0.084  0.999  0.108
+       Category 2  0.002  0.916  0.001  0.892
+     IDWC_T1
+       Category 1  0.348  0.950  0.972  0.361
+       Category 2  0.652  0.050  0.028  0.639
+     CLOSZ_T1      5.034  5.055  4.907  5.105
+     OPP5Z_T1      5.225  4.891  4.887  5.223
+     ESUPZ_T1      4.137  6.100  4.158  6.123
+     ISUPZ_T1      6.334  4.390  4.363  6.328
+
+     MEAN/PROBABILITY PROFILES FOR C2
+                       Latent class
+                     1      2      3      4
+     EDWC_T2
+       Category 1  0.998  0.084  0.999  0.108
+       Category 2  0.002  0.916  0.001  0.892
+     IDWC_T2
+       Category 1  0.348  0.950  0.972  0.361
+       Category 2  0.652  0.050  0.028  0.639
+     CLOSZ_T2      5.034  5.055  4.907  5.105
+     OPP5Z_T2      5.225  4.891  4.887  5.223
+     ESUPZ_T2      4.137  6.100  4.158  6.123
+     ISUPZ_T2      6.334  4.390  4.363  6.328
+
+     MEAN/PROBABILITY PROFILES FOR C3
+                       Latent class
+                     1      2      3      4
+     EDWC_T3
+       Category 1  0.998  0.084  0.999  0.108
+       Category 2  0.002  0.916  0.001  0.892
+     IDWC_T3
+       Category 1  0.348  0.950  0.972  0.361
+       Category 2  0.652  0.050  0.028  0.639
+     CLOSZ_T3      5.034  5.055  4.907  5.105
+     OPP5Z_T3      5.225  4.891  4.887  5.223
+     ESUPZ_T3      4.137  6.100  4.158  6.123
+     ISUPZ_T3      6.334  4.390  4.363  6.328
+
+     MEAN/PROBABILITY PROFILES FOR C4
+                       Latent class
+                     1      2      3      4
+     EDWC_T4
+       Category 1  0.998  0.084  0.999  0.108
+       Category 2  0.002  0.916  0.001  0.892
+     IDWC_T4
+       Category 1  0.348  0.950  0.972  0.361
+       Category 2  0.652  0.050  0.028  0.639
+     CLOSZ_T4      5.034  5.055  4.907  5.105
+     OPP5Z_T4      5.225  4.891  4.887  5.223
+     ESUPZ_T4      4.137  6.100  4.158  6.123
+     ISUPZ_T4      6.334  4.390  4.363  6.328
+
+
+LATENT TRANSITION PROBABILITIES BASED ON THE ESTIMATED MODEL
+
+  C1 Classes (Rows) by C2 Classes (Columns)
+
+            1        2        3        4
+
+   1     0.327    0.160    0.311    0.201
+   2     0.058    0.453    0.340    0.150
+   3     0.123    0.181    0.620    0.075
+   4     0.180    0.211    0.158    0.450
+
+  C2 Classes (Rows) by C3 Classes (Columns)
+
+            1        2        3        4
+
+   1     0.333    0.121    0.327    0.220
+   2     0.085    0.464    0.268    0.183
+   3     0.115    0.209    0.594    0.083
+   4     0.193    0.216    0.106    0.485
+
+  C3 Classes (Rows) by C4 Classes (Columns)
+
+            1        2        3        4
+
+   1     0.375    0.087    0.271    0.267
+   2     0.068    0.446    0.311    0.175
+   3     0.087    0.205    0.633    0.076
+   4     0.139    0.201    0.125    0.534
+
+
+TRANSITION PROBABILITY ODDS
+
+     TRANSITION TABLE ODDS AND 95% CONFIDENCE INTERVALS FOR C1 TO C2
+        1.000(1.000,1.000)   0.490(0.371,0.646)   0.951(0.757,1.196)   0.614(0.475,0.794)
+        0.127(0.094,0.172)   1.000(1.000,1.000)   0.751(0.646,0.873)   0.332(0.271,0.406)
+        0.199(0.171,0.231)   0.292(0.257,0.332)   1.000(1.000,1.000)   0.122(0.101,0.146)
+        0.401(0.314,0.511)   0.470(0.372,0.592)   0.351(0.272,0.452)   1.000(1.000,1.000)
+
+     TRANSITION TABLE ODDS AND 95% CONFIDENCE INTERVALS FOR C2 TO C3
+        1.000(1.000,1.000)   0.362(0.270,0.487)   0.981(0.788,1.221)   0.662(0.520,0.841)
+        0.183(0.142,0.234)   1.000(1.000,1.000)   0.577(0.491,0.677)   0.394(0.325,0.478)
+        0.193(0.163,0.228)   0.351(0.310,0.398)   1.000(1.000,1.000)   0.139(0.116,0.168)
+        0.399(0.321,0.496)   0.446(0.360,0.553)   0.219(0.166,0.290)   1.000(1.000,1.000)
+
+     TRANSITION TABLE ODDS AND 95% CONFIDENCE INTERVALS FOR C3 TO C4
+        1.000(1.000,1.000)   0.233(0.168,0.323)   0.722(0.579,0.899)   0.712(0.574,0.883)
+        0.153(0.117,0.201)   1.000(1.000,1.000)   0.698(0.600,0.813)   0.393(0.324,0.476)
+        0.137(0.113,0.167)   0.323(0.283,0.370)   1.000(1.000,1.000)   0.120(0.098,0.147)
+        0.261(0.208,0.328)   0.377(0.308,0.461)   0.235(0.184,0.300)   1.000(1.000,1.000)
+
+
+C-SPECIFIC CLASSIFICATION RESULTS
+
+Classification Quality for C1
+
+     Entropy                         0.994
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.994    0.000    0.006    0.000
+    2   0.000    0.997    0.000    0.003
+    3   0.001    0.000    0.999    0.000
+    4   0.000    0.006    0.000    0.994
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.996    0.000    0.004    0.000
+    2   0.000    0.996    0.000    0.004
+    3   0.002    0.000    0.998    0.000
+    4   0.000    0.005    0.000    0.995
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1     11.994   -1.817    6.443    0.000
+    2     -8.204    5.608   -5.698    0.000
+    3      7.429    1.043   13.814    0.000
+    4    -13.811   -5.371  -13.811    0.000
+
+Classification Quality for C2
+
+     Entropy                         0.990
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.986    0.000    0.014    0.000
+    2   0.000    0.997    0.000    0.003
+    3   0.001    0.000    0.999    0.000
+    4   0.001    0.012    0.000    0.987
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.997    0.000    0.003    0.001
+    2   0.000    0.992    0.000    0.008
+    3   0.005    0.000    0.995    0.000
+    4   0.000    0.005    0.000    0.995
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1      7.386   -6.426    1.455    0.000
+    2     -9.007    4.800   -4.132    0.000
+    3      8.427    4.190   13.811    0.000
+    4    -10.428   -5.284  -13.810    0.000
+
+Classification Quality for C3
+
+     Entropy                         0.985
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.983    0.000    0.017    0.000
+    2   0.000    0.991    0.001    0.008
+    3   0.005    0.000    0.995    0.000
+    4   0.000    0.013    0.000    0.987
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.986    0.000    0.014    0.000
+    2   0.000    0.990    0.000    0.010
+    3   0.006    0.001    0.993    0.000
+    4   0.000    0.011    0.000    0.989
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1     10.610   -3.191    6.339    0.000
+    2     -9.186    4.619   -9.186    0.000
+    3      8.753    6.477   13.809    0.000
+    4    -13.631   -4.492  -13.804    0.000
+
+Classification Quality for C4
+
+     Entropy                         0.983
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.972    0.000    0.028    0.000
+    2   0.000    0.991    0.000    0.009
+    3   0.004    0.000    0.996    0.000
+    4   0.000    0.016    0.000    0.984
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.989    0.000    0.011    0.000
+    2   0.000    0.986    0.000    0.014
+    3   0.010    0.000    0.990    0.000
+    4   0.000    0.011    0.000    0.989
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1      9.158   -4.646    4.635    0.000
+    2     -9.542    4.260   -3.755    0.000
+    3      9.181    3.578   13.806    0.000
+    4    -13.805   -4.538  -13.805    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Parameters in the Overall Part of the Model (Parameters Equal in All of the Classes)
+
+ F1       BY
+    CLOSZ_T1           1.000      0.000    999.000    999.000
+    OPP5Z_T1           0.942      0.013     74.503      0.000
+    ESUPZ_T1           0.042      0.004      9.610      0.000
+    ISUPZ_T1           0.126      0.007     17.111      0.000
+    EDWC_T1           -0.590      0.085     -6.909      0.000
+    IDWC_T1           -1.327      0.072    -18.443      0.000
+    CLOSZ_T2           0.221      0.025      8.914      0.000
+    OPP5Z_T2           0.942      0.013     74.503      0.000
+    ESUPZ_T2           0.042      0.004      9.610      0.000
+    ISUPZ_T2           0.126      0.007     17.111      0.000
+    EDWC_T2           -0.590      0.085     -6.909      0.000
+    IDWC_T2           -1.327      0.072    -18.443      0.000
+    CLOSZ_T3           0.221      0.025      8.914      0.000
+    OPP5Z_T3           0.942      0.013     74.503      0.000
+    ESUPZ_T3           0.042      0.004      9.610      0.000
+    ISUPZ_T3           0.126      0.007     17.111      0.000
+    EDWC_T3           -0.590      0.085     -6.909      0.000
+    IDWC_T3           -1.327      0.072    -18.443      0.000
+    CLOSZ_T4           0.221      0.025      8.914      0.000
+    OPP5Z_T4           0.942      0.013     74.503      0.000
+    ESUPZ_T4           0.042      0.004      9.610      0.000
+    ISUPZ_T4           0.126      0.007     17.111      0.000
+    EDWC_T4           -0.590      0.085     -6.909      0.000
+    IDWC_T4           -1.327      0.072    -18.443      0.000
+
+ Means
+    F1                 0.000      0.000    999.000    999.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    CLOSZ_T1           1.356      0.035     39.121      0.000
+    OPP5Z_T1           0.425      0.017     24.463      0.000
+    ESUPZ_T1           0.062      0.003     23.110      0.000
+    ISUPZ_T1           0.124      0.004     29.611      0.000
+    CLOSZ_T2           0.964      0.022     44.170      0.000
+    OPP5Z_T2           0.354      0.014     24.754      0.000
+    ESUPZ_T2           0.059      0.003     23.480      0.000
+    ISUPZ_T2           0.115      0.004     30.868      0.000
+    CLOSZ_T3           0.951      0.023     41.828      0.000
+    OPP5Z_T3           0.331      0.014     23.216      0.000
+    ESUPZ_T3           0.052      0.002     24.467      0.000
+    ISUPZ_T3           0.118      0.004     30.369      0.000
+    CLOSZ_T4           0.959      0.022     43.079      0.000
+    OPP5Z_T4           0.379      0.016     23.274      0.000
+    ESUPZ_T4           0.057      0.002     24.329      0.000
+    ISUPZ_T4           0.121      0.004     29.452      0.000
+
+Parameters for Class-specific Model Parts of C1
+
+Latent Class C1#1
+
+ Intercepts
+    CLOSZ_T1           5.034      0.025    200.168      0.000
+    OPP5Z_T1           5.225      0.020    255.659      0.000
+    ESUPZ_T1           4.137      0.002   1837.185      0.000
+    ISUPZ_T1           6.334      0.019    334.867      0.000
+
+ Thresholds
+    EDWC_T1$1          6.447      0.582     11.068      0.000
+    IDWC_T1$1         -0.836      0.069    -12.175      0.000
+
+Latent Class C1#2
+
+ Intercepts
+    CLOSZ_T1           5.055      0.021    246.536      0.000
+    OPP5Z_T1           4.891      0.020    244.448      0.000
+    ESUPZ_T1           6.100      0.008    752.414      0.000
+    ISUPZ_T1           4.390      0.005    871.570      0.000
+
+ Thresholds
+    EDWC_T1$1         -2.524      0.074    -34.327      0.000
+    IDWC_T1$1          3.656      0.131     27.950      0.000
+
+Latent Class C1#3
+
+ Intercepts
+    CLOSZ_T1           4.907      0.019    257.553      0.000
+    OPP5Z_T1           4.887      0.019    261.429      0.000
+    ESUPZ_T1           4.158      0.002   2562.399      0.000
+    ISUPZ_T1           4.363      0.003   1412.034      0.000
+
+ Thresholds
+    EDWC_T1$1          6.907      0.385     17.937      0.000
+    IDWC_T1$1          4.324      0.143     30.235      0.000
+
+Latent Class C1#4
+
+ Intercepts
+    CLOSZ_T1           5.105      0.022    230.785      0.000
+    OPP5Z_T1           5.223      0.019    272.372      0.000
+    ESUPZ_T1           6.123      0.009    673.859      0.000
+    ISUPZ_T1           6.328      0.017    379.486      0.000
+
+ Thresholds
+    EDWC_T1$1         -2.247      0.079    -28.302      0.000
+    IDWC_T1$1         -0.760      0.063    -12.079      0.000
+
+Parameters for Class-specific Model Parts of C2
+
+Latent Class C2#1
+
+ Intercepts
+    CLOSZ_T2           5.034      0.025    200.168      0.000
+    OPP5Z_T2           5.225      0.020    255.659      0.000
+    ESUPZ_T2           4.137      0.002   1837.185      0.000
+    ISUPZ_T2           6.334      0.019    334.867      0.000
+
+ Thresholds
+    EDWC_T2$1          6.447      0.582     11.068      0.000
+    IDWC_T2$1         -0.836      0.069    -12.175      0.000
+
+Latent Class C2#2
+
+ Intercepts
+    CLOSZ_T2           5.055      0.021    246.536      0.000
+    OPP5Z_T2           4.891      0.020    244.448      0.000
+    ESUPZ_T2           6.100      0.008    752.414      0.000
+    ISUPZ_T2           4.390      0.005    871.570      0.000
+
+ Thresholds
+    EDWC_T2$1         -2.524      0.074    -34.327      0.000
+    IDWC_T2$1          3.656      0.131     27.950      0.000
+
+Latent Class C2#3
+
+ Intercepts
+    CLOSZ_T2           4.907      0.019    257.553      0.000
+    OPP5Z_T2           4.887      0.019    261.429      0.000
+    ESUPZ_T2           4.158      0.002   2562.399      0.000
+    ISUPZ_T2           4.363      0.003   1412.034      0.000
+
+ Thresholds
+    EDWC_T2$1          6.907      0.385     17.937      0.000
+    IDWC_T2$1          4.324      0.143     30.235      0.000
+
+Latent Class C2#4
+
+ Intercepts
+    CLOSZ_T2           5.105      0.022    230.785      0.000
+    OPP5Z_T2           5.223      0.019    272.372      0.000
+    ESUPZ_T2           6.123      0.009    673.859      0.000
+    ISUPZ_T2           6.328      0.017    379.486      0.000
+
+ Thresholds
+    EDWC_T2$1         -2.247      0.079    -28.302      0.000
+    IDWC_T2$1         -0.760      0.063    -12.079      0.000
+
+Parameters for Class-specific Model Parts of C3
+
+Latent Class C3#1
+
+ Intercepts
+    CLOSZ_T3           5.034      0.025    200.168      0.000
+    OPP5Z_T3           5.225      0.020    255.659      0.000
+    ESUPZ_T3           4.137      0.002   1837.185      0.000
+    ISUPZ_T3           6.334      0.019    334.867      0.000
+
+ Thresholds
+    EDWC_T3$1          6.447      0.582     11.068      0.000
+    IDWC_T3$1         -0.836      0.069    -12.175      0.000
+
+Latent Class C3#2
+
+ Intercepts
+    CLOSZ_T3           5.055      0.021    246.536      0.000
+    OPP5Z_T3           4.891      0.020    244.448      0.000
+    ESUPZ_T3           6.100      0.008    752.414      0.000
+    ISUPZ_T3           4.390      0.005    871.570      0.000
+
+ Thresholds
+    EDWC_T3$1         -2.524      0.074    -34.327      0.000
+    IDWC_T3$1          3.656      0.131     27.950      0.000
+
+Latent Class C3#3
+
+ Intercepts
+    CLOSZ_T3           4.907      0.019    257.553      0.000
+    OPP5Z_T3           4.887      0.019    261.429      0.000
+    ESUPZ_T3           4.158      0.002   2562.399      0.000
+    ISUPZ_T3           4.363      0.003   1412.034      0.000
+
+ Thresholds
+    EDWC_T3$1          6.907      0.385     17.937      0.000
+    IDWC_T3$1          4.324      0.143     30.235      0.000
+
+Latent Class C3#4
+
+ Intercepts
+    CLOSZ_T3           5.105      0.022    230.785      0.000
+    OPP5Z_T3           5.223      0.019    272.372      0.000
+    ESUPZ_T3           6.123      0.009    673.859      0.000
+    ISUPZ_T3           6.328      0.017    379.486      0.000
+
+ Thresholds
+    EDWC_T3$1         -2.247      0.079    -28.302      0.000
+    IDWC_T3$1         -0.760      0.063    -12.079      0.000
+
+Parameters for Class-specific Model Parts of C4
+
+Latent Class C4#1
+
+ Intercepts
+    CLOSZ_T4           5.034      0.025    200.168      0.000
+    OPP5Z_T4           5.225      0.020    255.659      0.000
+    ESUPZ_T4           4.137      0.002   1837.185      0.000
+    ISUPZ_T4           6.334      0.019    334.867      0.000
+
+ Thresholds
+    EDWC_T4$1          6.447      0.582     11.068      0.000
+    IDWC_T4$1         -0.836      0.069    -12.175      0.000
+
+Latent Class C4#2
+
+ Intercepts
+    CLOSZ_T4           5.055      0.021    246.536      0.000
+    OPP5Z_T4           4.891      0.020    244.448      0.000
+    ESUPZ_T4           6.100      0.008    752.414      0.000
+    ISUPZ_T4           4.390      0.005    871.570      0.000
+
+ Thresholds
+    EDWC_T4$1         -2.524      0.074    -34.327      0.000
+    IDWC_T4$1          3.656      0.131     27.950      0.000
+
+Latent Class C4#3
+
+ Intercepts
+    CLOSZ_T4           4.907      0.019    257.553      0.000
+    OPP5Z_T4           4.887      0.019    261.429      0.000
+    ESUPZ_T4           4.158      0.002   2562.399      0.000
+    ISUPZ_T4           4.363      0.003   1412.034      0.000
+
+ Thresholds
+    EDWC_T4$1          6.907      0.385     17.937      0.000
+    IDWC_T4$1          4.324      0.143     30.235      0.000
+
+Latent Class C4#4
+
+ Intercepts
+    CLOSZ_T4           5.105      0.022    230.785      0.000
+    OPP5Z_T4           5.223      0.019    272.372      0.000
+    ESUPZ_T4           6.123      0.009    673.859      0.000
+    ISUPZ_T4           6.328      0.017    379.486      0.000
+
+ Thresholds
+    EDWC_T4$1         -2.247      0.079    -28.302      0.000
+    IDWC_T4$1         -0.760      0.063    -12.079      0.000
+
+Categorical Latent Variables
+
+ C2#1     ON
+    C1#1               1.403      0.181      7.769      0.000
+    C1#2              -0.043      0.212     -0.202      0.840
+    C1#3               1.408      0.168      8.363      0.000
+
+ C2#2     ON
+    C1#1               0.530      0.196      2.709      0.007
+    C1#2               1.860      0.158     11.794      0.000
+    C1#3               1.632      0.160     10.190      0.000
+
+ C2#3     ON
+    C1#1               1.486      0.186      7.990      0.000
+    C1#2               1.865      0.168     11.105      0.000
+    C1#3               3.155      0.161     19.626      0.000
+
+ C3#1     ON
+    C2#1               1.332      0.166      8.035      0.000
+    C2#2               0.149      0.181      0.826      0.409
+    C2#3               1.245      0.162      7.661      0.000
+
+ C3#2     ON
+    C2#1               0.206      0.196      1.054      0.292
+    C2#2               1.739      0.150     11.629      0.000
+    C2#3               1.733      0.154     11.265      0.000
+
+ C3#3     ON
+    C2#1               1.911      0.190     10.079      0.000
+    C2#2               1.897      0.179     10.586      0.000
+    C2#3               3.488      0.173     20.199      0.000
+
+ C4#1     ON
+    C3#1               1.684      0.160     10.537      0.000
+    C3#2               0.402      0.191      2.104      0.035
+    C3#3               1.480      0.178      8.294      0.000
+
+ C4#2     ON
+    C3#1              -0.143      0.203     -0.702      0.483
+    C3#2               1.910      0.145     13.210      0.000
+    C3#3               1.968      0.157     12.551      0.000
+
+ C4#3     ON
+    C3#1               1.462      0.174      8.414      0.000
+    C3#2               2.024      0.162     12.487      0.000
+    C3#3               3.570      0.163     21.859      0.000
+
+ Means
+    C1#1              -0.086      0.064     -1.345      0.179
+    C1#2               0.547      0.056      9.796      0.000
+    C1#3               1.211      0.050     23.981      0.000
+    C2#1              -0.915      0.124     -7.386      0.000
+    C2#2              -0.756      0.118     -6.395      0.000
+    C2#3              -1.048      0.130     -8.079      0.000
+    C3#1              -0.919      0.111     -8.247      0.000
+    C3#2              -0.808      0.110     -7.371      0.000
+    C3#3              -1.517      0.143    -10.600      0.000
+    C4#1              -1.344      0.116    -11.545      0.000
+    C4#2              -0.976      0.103     -9.473      0.000
+    C4#3              -1.449      0.124    -11.644      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.238E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+RESULTS IN PROBABILITY SCALE
+
+                    Estimate
+
+Results for Class-specific Model Parts of C1
+
+Latent Class C1#1
+
+ EDWC_T1
+    Category 1         0.998
+    Category 2         0.002
+ IDWC_T1
+    Category 1         0.348
+    Category 2         0.652
+
+Latent Class C1#2
+
+ EDWC_T1
+    Category 1         0.084
+    Category 2         0.916
+ IDWC_T1
+    Category 1         0.950
+    Category 2         0.050
+
+Latent Class C1#3
+
+ EDWC_T1
+    Category 1         0.999
+    Category 2         0.001
+ IDWC_T1
+    Category 1         0.972
+    Category 2         0.028
+
+Latent Class C1#4
+
+ EDWC_T1
+    Category 1         0.108
+    Category 2         0.892
+ IDWC_T1
+    Category 1         0.361
+    Category 2         0.639
+
+Results for Class-specific Model Parts of C2
+
+Latent Class C2#1
+
+ EDWC_T2
+    Category 1         0.998
+    Category 2         0.002
+ IDWC_T2
+    Category 1         0.348
+    Category 2         0.652
+
+Latent Class C2#2
+
+ EDWC_T2
+    Category 1         0.084
+    Category 2         0.916
+ IDWC_T2
+    Category 1         0.950
+    Category 2         0.050
+
+Latent Class C2#3
+
+ EDWC_T2
+    Category 1         0.999
+    Category 2         0.001
+ IDWC_T2
+    Category 1         0.972
+    Category 2         0.028
+
+Latent Class C2#4
+
+ EDWC_T2
+    Category 1         0.108
+    Category 2         0.892
+ IDWC_T2
+    Category 1         0.361
+    Category 2         0.639
+
+Results for Class-specific Model Parts of C3
+
+Latent Class C3#1
+
+ EDWC_T3
+    Category 1         0.998
+    Category 2         0.002
+ IDWC_T3
+    Category 1         0.348
+    Category 2         0.652
+
+Latent Class C3#2
+
+ EDWC_T3
+    Category 1         0.084
+    Category 2         0.916
+ IDWC_T3
+    Category 1         0.950
+    Category 2         0.050
+
+Latent Class C3#3
+
+ EDWC_T3
+    Category 1         0.999
+    Category 2         0.001
+ IDWC_T3
+    Category 1         0.972
+    Category 2         0.028
+
+Latent Class C3#4
+
+ EDWC_T3
+    Category 1         0.108
+    Category 2         0.892
+ IDWC_T3
+    Category 1         0.361
+    Category 2         0.639
+
+Results for Class-specific Model Parts of C4
+
+Latent Class C4#1
+
+ EDWC_T4
+    Category 1         0.998
+    Category 2         0.002
+ IDWC_T4
+    Category 1         0.348
+    Category 2         0.652
+
+Latent Class C4#2
+
+ EDWC_T4
+    Category 1         0.084
+    Category 2         0.916
+ IDWC_T4
+    Category 1         0.950
+    Category 2         0.050
+
+Latent Class C4#3
+
+ EDWC_T4
+    Category 1         0.999
+    Category 2         0.001
+ IDWC_T4
+    Category 1         0.972
+    Category 2         0.028
+
+Latent Class C4#4
+
+ EDWC_T4
+    Category 1         0.108
+    Category 2         0.892
+ IDWC_T4
+    Category 1         0.361
+    Category 2         0.639
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    result_ri_lta_inv.txt
+
+  Order and format of variables
+
+    EDWC_T1        F10.3
+    IDWC_T1        F10.3
+    EDWC_T2        F10.3
+    IDWC_T2        F10.3
+    EDWC_T3        F10.3
+    IDWC_T3        F10.3
+    EDWC_T4        F10.3
+    IDWC_T4        F10.3
+    CLOSZ_T1       F10.3
+    OPP5Z_T1       F10.3
+    ESUPZ_T1       F10.3
+    ISUPZ_T1       F10.3
+    CLOSZ_T2       F10.3
+    OPP5Z_T2       F10.3
+    ESUPZ_T2       F10.3
+    ISUPZ_T2       F10.3
+    CLOSZ_T3       F10.3
+    OPP5Z_T3       F10.3
+    ESUPZ_T3       F10.3
+    ISUPZ_T3       F10.3
+    CLOSZ_T4       F10.3
+    OPP5Z_T4       F10.3
+    ESUPZ_T4       F10.3
+    ISUPZ_T4       F10.3
+    CPROB1         F10.3
+    CPROB2         F10.3
+    CPROB3         F10.3
+    CPROB4         F10.3
+    CPROB5         F10.3
+    CPROB6         F10.3
+    CPROB7         F10.3
+    CPROB8         F10.3
+    CPROB9         F10.3
+    CPROB10        F10.3
+    CPROB11        F10.3
+    CPROB12        F10.3
+    CPROB13        F10.3
+    CPROB14        F10.3
+    CPROB15        F10.3
+    CPROB16        F10.3
+    CPROB17        F10.3
+    CPROB18        F10.3
+    CPROB19        F10.3
+    CPROB20        F10.3
+    CPROB21        F10.3
+    CPROB22        F10.3
+    CPROB23        F10.3
+    CPROB24        F10.3
+    CPROB25        F10.3
+    CPROB26        F10.3
+    CPROB27        F10.3
+    CPROB28        F10.3
+    CPROB29        F10.3
+    CPROB30        F10.3
+    CPROB31        F10.3
+    CPROB32        F10.3
+    CPROB33        F10.3
+    CPROB34        F10.3
+    CPROB35        F10.3
+    CPROB36        F10.3
+    CPROB37        F10.3
+    CPROB38        F10.3
+    CPROB39        F10.3
+    CPROB40        F10.3
+    CPROB41        F10.3
+    CPROB42        F10.3
+    CPROB43        F10.3
+    CPROB44        F10.3
+    CPROB45        F10.3
+    CPROB46        F10.3
+    CPROB47        F10.3
+    CPROB48        F10.3
+    CPROB49        F10.3
+    CPROB50        F10.3
+    CPROB51        F10.3
+    CPROB52        F10.3
+    CPROB53        F10.3
+    CPROB54        F10.3
+    CPROB55        F10.3
+    CPROB56        F10.3
+    CPROB57        F10.3
+    CPROB58        F10.3
+    CPROB59        F10.3
+    CPROB60        F10.3
+    CPROB61        F10.3
+    CPROB62        F10.3
+    CPROB63        F10.3
+    CPROB64        F10.3
+    CPROB65        F10.3
+    CPROB66        F10.3
+    CPROB67        F10.3
+    CPROB68        F10.3
+    CPROB69        F10.3
+    CPROB70        F10.3
+    CPROB71        F10.3
+    CPROB72        F10.3
+    CPROB73        F10.3
+    CPROB74        F10.3
+    CPROB75        F10.3
+    CPROB76        F10.3
+    CPROB77        F10.3
+    CPROB78        F10.3
+    CPROB79        F10.3
+    CPROB80        F10.3
+    CPROB81        F10.3
+    CPROB82        F10.3
+    CPROB83        F10.3
+    CPROB84        F10.3
+    CPROB85        F10.3
+    CPROB86        F10.3
+    CPROB87        F10.3
+    CPROB88        F10.3
+    CPROB89        F10.3
+    CPROB90        F10.3
+    CPROB91        F10.3
+    CPROB92        F10.3
+    CPROB93        F10.3
+    CPROB94        F10.3
+    CPROB95        F10.3
+    CPROB96        F10.3
+    CPROB97        F10.3
+    CPROB98        F10.3
+    CPROB99        F10.3
+    CPROB100       F10.3
+    CPROB101       F10.3
+    CPROB102       F10.3
+    CPROB103       F10.3
+    CPROB104       F10.3
+    CPROB105       F10.3
+    CPROB106       F10.3
+    CPROB107       F10.3
+    CPROB108       F10.3
+    CPROB109       F10.3
+    CPROB110       F10.3
+    CPROB111       F10.3
+    CPROB112       F10.3
+    CPROB113       F10.3
+    CPROB114       F10.3
+    CPROB115       F10.3
+    CPROB116       F10.3
+    CPROB117       F10.3
+    CPROB118       F10.3
+    CPROB119       F10.3
+    CPROB120       F10.3
+    CPROB121       F10.3
+    CPROB122       F10.3
+    CPROB123       F10.3
+    CPROB124       F10.3
+    CPROB125       F10.3
+    CPROB126       F10.3
+    CPROB127       F10.3
+    CPROB128       F10.3
+    CPROB129       F10.3
+    CPROB130       F10.3
+    CPROB131       F10.3
+    CPROB132       F10.3
+    CPROB133       F10.3
+    CPROB134       F10.3
+    CPROB135       F10.3
+    CPROB136       F10.3
+    CPROB137       F10.3
+    CPROB138       F10.3
+    CPROB139       F10.3
+    CPROB140       F10.3
+    CPROB141       F10.3
+    CPROB142       F10.3
+    CPROB143       F10.3
+    CPROB144       F10.3
+    CPROB145       F10.3
+    CPROB146       F10.3
+    CPROB147       F10.3
+    CPROB148       F10.3
+    CPROB149       F10.3
+    CPROB150       F10.3
+    CPROB151       F10.3
+    CPROB152       F10.3
+    CPROB153       F10.3
+    CPROB154       F10.3
+    CPROB155       F10.3
+    CPROB156       F10.3
+    CPROB157       F10.3
+    CPROB158       F10.3
+    CPROB159       F10.3
+    CPROB160       F10.3
+    CPROB161       F10.3
+    CPROB162       F10.3
+    CPROB163       F10.3
+    CPROB164       F10.3
+    CPROB165       F10.3
+    CPROB166       F10.3
+    CPROB167       F10.3
+    CPROB168       F10.3
+    CPROB169       F10.3
+    CPROB170       F10.3
+    CPROB171       F10.3
+    CPROB172       F10.3
+    CPROB173       F10.3
+    CPROB174       F10.3
+    CPROB175       F10.3
+    CPROB176       F10.3
+    CPROB177       F10.3
+    CPROB178       F10.3
+    CPROB179       F10.3
+    CPROB180       F10.3
+    CPROB181       F10.3
+    CPROB182       F10.3
+    CPROB183       F10.3
+    CPROB184       F10.3
+    CPROB185       F10.3
+    CPROB186       F10.3
+    CPROB187       F10.3
+    CPROB188       F10.3
+    CPROB189       F10.3
+    CPROB190       F10.3
+    CPROB191       F10.3
+    CPROB192       F10.3
+    CPROB193       F10.3
+    CPROB194       F10.3
+    CPROB195       F10.3
+    CPROB196       F10.3
+    CPROB197       F10.3
+    CPROB198       F10.3
+    CPROB199       F10.3
+    CPROB200       F10.3
+    CPROB201       F10.3
+    CPROB202       F10.3
+    CPROB203       F10.3
+    CPROB204       F10.3
+    CPROB205       F10.3
+    CPROB206       F10.3
+    CPROB207       F10.3
+    CPROB208       F10.3
+    CPROB209       F10.3
+    CPROB210       F10.3
+    CPROB211       F10.3
+    CPROB212       F10.3
+    CPROB213       F10.3
+    CPROB214       F10.3
+    CPROB215       F10.3
+    CPROB216       F10.3
+    CPROB217       F10.3
+    CPROB218       F10.3
+    CPROB219       F10.3
+    CPROB220       F10.3
+    CPROB221       F10.3
+    CPROB222       F10.3
+    CPROB223       F10.3
+    CPROB224       F10.3
+    CPROB225       F10.3
+    CPROB226       F10.3
+    CPROB227       F10.3
+    CPROB228       F10.3
+    CPROB229       F10.3
+    CPROB230       F10.3
+    CPROB231       F10.3
+    CPROB232       F10.3
+    CPROB233       F10.3
+    CPROB234       F10.3
+    CPROB235       F10.3
+    CPROB236       F10.3
+    CPROB237       F10.3
+    CPROB238       F10.3
+    CPROB239       F10.3
+    CPROB240       F10.3
+    CPROB241       F10.3
+    CPROB242       F10.3
+    CPROB243       F10.3
+    CPROB244       F10.3
+    CPROB245       F10.3
+    CPROB246       F10.3
+    CPROB247       F10.3
+    CPROB248       F10.3
+    CPROB249       F10.3
+    CPROB250       F10.3
+    CPROB251       F10.3
+    CPROB252       F10.3
+    CPROB253       F10.3
+    CPROB254       F10.3
+    CPROB255       F10.3
+    CPROB256       F10.3
+    C1             F10.3
+    C2             F10.3
+    C3             F10.3
+    C4             F10.3
+    MLCJOINT       F10.3
+    PID            F12.0
+
+  Save file format
+    285F10.3 F12.0
+
+  Save file record length    10000
+
+  Save missing symbol        *
+
+
+     Beginning Time:  00:25:47
+        Ending Time:  07:05:18
+       Elapsed Time:  06:39:31
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2024 Muthen & Muthen
