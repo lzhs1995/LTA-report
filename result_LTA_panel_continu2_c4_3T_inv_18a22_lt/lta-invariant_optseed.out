@@ -1,0 +1,2551 @@
+Mplus VERSION 8.11
+MUTHEN & MUTHEN
+04/15/2025   9:24 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  LTA (Invariant_optseed)
+  DATA:
+  FILE = "lta_optseed.dat";
+
+  VARIABLE:
+  NAMES = pid closz_t2 closz_t4 clos_t2 clos_t4 esupz_t2 esupz_t4 esup_t2 esup_t4
+       edwz_t2 edwz_t4 edw_t2 edw_t4 isupz_t2 isupz_t4 isup_t2 isup_t4 idwz_t2 idwz_t4
+       idw_t2 idw_t4 meetz_t2 meetz_t4 meet_t2 meet_t4 contz_t2 contz_t4 cont_t2
+       cont_t4 oppz_t2 oppz_t4 opp_t2 opp_t4 opp5z_t2 opp5z_t4 opp5_t2 opp5_t4
+       opp5n_t2 opp5n_t4 agec_t2 agec_t4 educ_t2 educ_t4 siopc_t2 siopc_t4 age1_t2
+       age1_t4 age1_t21 age1_t23 age1_t41 age1_t43 edu1_t2 edu1_t4 edu1_t21 edu1_t23
+       edu1_t41 edu1_t43 siop1_t2 siop1_t4 sip1_t21 sip1_t23 sip1_t41 sip1_t43 age2_t2
+       age2_t4 age2_t21 age2_t23 age2_t41 age2_t43 edu2_t2 edu2_t4 edu2_t21 edu2_t23
+       edu2_t41 edu2_t43 siop2_t2 siop2_t4 sip2_t21 sip2_t23 sip2_t41 sip2_t43 age3_t2
+       age3_t4 age3_t21 age3_t23 age3_t41 age3_t43 edu3_t2 edu3_t4 edu3_t21 edu3_t23
+       edu3_t41 edu3_t43 siop3_t2 siop3_t4 sip3_t21 sip3_t23 sip3_t41 sip3_t43 incc_t2
+       incc_t4 hwc_t2 hwc_t4 inccw hwcw incnw hwnw inc1_t2 inc1_t4 inc2_t2 inc2_t4
+       inc3_t2 inc3_t4 inc1_t21 inc1_t23 inc1_t41 inc1_t43 inc2_t21 inc2_t23 inc2_t41
+       inc2_t43 inc3_t21 inc3_t23 inc3_t41 inc3_t43 hw1_t2 hw1_t4 hw2_t2 hw2_t4 hw3_t2
+       hw3_t4 hw1_t21 hw1_t23 hw1_t41 hw1_t43 hw2_t21 hw2_t23 hw2_t41 hw2_t43 hw3_t21
+       hw3_t23 hw3_t41 hw3_t43 inc11w inc11w_1 inc11w_3 inc11w_5 inc11w_7 inc12w
+       inc12w_1 inc12w_3 inc12w_5 inc12w_7 hw11w hw11w_1 hw11w_3 hw11w_5 hw11w_7 hw12w
+       hw12w_1 hw12w_3 hw12w_5 hw12w_7 inc21w inc21w_1 inc21w_3 inc21w_5 inc21w_7
+       inc22w inc22w_1 inc22w_3 inc22w_5 inc22w_7 hw21w hw21w_1 hw21w_3 hw21w_5
+       hw21w_7 hw22w hw22w_1 hw22w_3 hw22w_5 hw22w_7 inc31w inc31w_1 inc31w_3 inc31w_5
+       inc31w_7 inc32w inc32w_1 inc32w_3 inc32w_5 inc32w_7 hw31w hw31w_1 hw31w_3
+       hw31w_5 hw31w_7 hw32w hw32w_1 hw32w_3 hw32w_5 hw32w_7 sex_t2 sex_t4 cd_t2 cd_t4
+       childcw childnw dw_t2 dw_t4 dw_t22 dw_t23 dw_t42 dw_t43 dww dww1_2 dww1_3 ag_t2
+       ag_t4 aage_t2 aage_t4 aedu_t2 aedu_t4 asiop_t2 asiop_t4 ainc_t2 ainc_t4 ahw_t2
+       ahw_t4 ainccw ahwcw aincnw aincnw_1 aincnw_3 ahwnw ahwnw_1 ahwnw_3 ahk_t2
+       ahk_t4 ahknw page_t2 page_t4 pagen_t2 pagen_t4 page_t22 page_t23 page_t24
+       page_t42 page_t43 page_t44 psex_t2 psex_t4 pmar_t2 pmar_t4 pmarnw pedu_t2
+       pedu_t4 pedu_t22 pedu_t23 pedu_t42 pedu_t43 phk_t2 phk_t4 pcor_t2 pcor_t4
+       pcornw ppart_t2 ppart_t4 finc_t2 finc_t4 finccw fincnw fincnw_1 fincnw_3
+       furb_t2 furb_t4 fprov_t2 fprov_t4 fpov_t21 fpov_t23 fpov_t41 fpov_t43 lft_t2
+       lft_t4 fcz_t2 fcz_t4 resp_t2 resp_t4 lifetime;
+   MISSING=.;
+   usevar =  closz_t2 opp5z_t2 esupz_t2 isupz_t2
+  closz_t4 opp5z_t4 esupz_t4 isupz_t4
+  edwc_t2 idwc_t2
+  edwc_t4 idwc_t4; ! Time1-3 have 4 continuous items. !
+
+  categorical = edwc_t2 idwc_t2 edwc_t4 idwc_t4;
+
+  IDVARIABLE = pid;
+  classes = c2(4) c4(4);
+  DEFINE:
+
+  edwc_t2 = 0;
+  IF (edw_t2 LT esup_t2*1) THEN edwc_t2 = 1;
+
+  idwc_t2 = 0;
+  IF (idw_t2 LT isup_t2*1) THEN idwc_t2 = 1;
+
+  edwc_t4 = 0;
+  IF (edw_t4 LT esup_t4*1) THEN edwc_t4 = 1;
+
+  idwc_t4 = 0;
+  IF (idw_t4 LT isup_t4*1) THEN idwc_t4 = 1;
+  ANALYSIS:
+  ALGORITHM = EM;
+  ! algorithm = integration; !
+  ! integration = 30; !
+  estimator = mlr;
+  type = mixture;
+  optseed = 161421;
+  starts = 600 200;
+  ! LRTSTARTS = 20 5 100 25; !
+  processors=10;
+  MODEL:
+  %overall%
+  c4 on c2; !!! estimate all multinomial logistic regressions !!!
+  !!! The above syntax can also be written as: !!!
+  ! c2#1 on c1#1 c1#2 c1#3; !
+  ! c2#2 on c1#1 c1#2 c1#3; !
+  ! c2#3 on c1#1 c1#2 c1#3; !
+
+  MODEL c2: !!! the following syntax will allow item thresholds !!!
+  !!! to be estimated for each class (e.g. invariance) !!!
+  %c2#1%
+  [closz_t2-isupz_t2] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t2$1 idwc_t2$1] (5-6);
+  %c2#2%
+  [closz_t2-isupz_t2] (7-10);
+  [edwc_t2$1 idwc_t2$1] (11-12);
+  %c2#3%
+  [closz_t2-isupz_t2] (13-16);
+  [edwc_t2$1 idwc_t2$1] (17-18);
+  %c2#4%
+  [closz_t2-isupz_t2] (19-22);
+  [edwc_t2$1 idwc_t2$1] (23-24);
+
+  MODEL c4:
+  %c4#1%
+  [closz_t4-isupz_t4] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+  [edwc_t4$1 idwc_t4$1] (5-6);
+  %c4#2%
+  [closz_t4-isupz_t4] (7-10);
+  [edwc_t4$1 idwc_t4$1] (11-12);
+  %c4#3%
+  [closz_t4-isupz_t4] (13-16);
+  [edwc_t4$1 idwc_t4$1] (17-18);
+  %c4#4%
+  [closz_t4-isupz_t4] (19-22);
+  [edwc_t4$1 idwc_t4$1] (23-24);
+  OUTPUT:
+  tech1 tech8 tech15 svalues(2 1 3 4 | 2 1 3 4);
+  SAVEDATA:
+  FILE = result_lta_inv.txt;
+  SAVE = CPROB;
+
+
+
+*** WARNING in MODEL command
+  All variables are uncorrelated with all other variables within class.
+  Check that this is what is intended.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+LTA (Invariant_optseed)
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5699
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           2
+
+Observed dependent variables
+
+  Continuous
+   CLOSZ_T2    OPP5Z_T2    ESUPZ_T2    ISUPZ_T2    CLOSZ_T4    OPP5Z_T4
+   ESUPZ_T4    ISUPZ_T4
+
+  Binary and ordered categorical (ordinal)
+   EDWC_T2     IDWC_T2     EDWC_T4     IDWC_T4
+
+Categorical latent variables
+   C2          C4
+
+Variables with special functions
+
+  ID variable           PID
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-03
+    Relative loglikelihood change                        0.100D-05
+    Derivative                                           0.100D-03
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-03
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-03
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                          EM
+Random Starts Specifications
+  Random seed for analysis                                  161421
+Parameterization                                             LOGIT
+Link                                                         LOGIT
+
+Input data file(s)
+  lta_optseed.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+     Number of y missing data patterns           1
+     Number of u missing data patterns           1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR Y
+
+
+           Covariance Coverage
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       1.000
+ OPP5Z_T2       1.000         1.000
+ ESUPZ_T2       1.000         1.000         1.000
+ ISUPZ_T2       1.000         1.000         1.000         1.000
+ CLOSZ_T4       1.000         1.000         1.000         1.000         1.000
+ OPP5Z_T4       1.000         1.000         1.000         1.000         1.000
+ ESUPZ_T4       1.000         1.000         1.000         1.000         1.000
+ ISUPZ_T4       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       1.000
+ ESUPZ_T4       1.000         1.000
+ ISUPZ_T4       1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    EDWC_T2
+      Category 1    0.627         3574.000
+      Category 2    0.373         2125.000
+    IDWC_T2
+      Category 1    0.827         4713.000
+      Category 2    0.173          986.000
+    EDWC_T4
+      Category 1    0.576         3281.000
+      Category 2    0.424         2418.000
+    IDWC_T4
+      Category 1    0.755         4301.000
+      Category 2    0.245         1398.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     CLOSZ_T2              5.000      -0.794       0.557    0.23%       4.584      4.584      4.584
+            5699.000       1.000       0.147       5.927   46.69%       5.927      5.927
+     OPP5Z_T2              5.000      -0.613       2.180    2.04%       4.086      5.039      5.039
+            5699.000       1.000      -0.467       5.992   41.71%       5.992      5.992
+     ESUPZ_T2              5.000       0.514       4.181   58.36%       4.181      4.181      4.181
+            5699.000       1.000      -1.516       7.384    0.09%       5.458      6.107
+     ISUPZ_T2              5.000       1.133       4.349   65.96%       4.349      4.349      4.349
+            5699.000       1.000      -0.339       7.130    9.91%       4.349      6.203
+     CLOSZ_T4              5.000      -0.892       0.710    0.33%       4.573      4.573      5.860
+            5699.000       1.000       0.196       5.860   50.73%       5.860      5.860
+     OPP5Z_T4              5.000      -0.638       2.154    2.16%       4.090      5.058      5.058
+            5699.000       1.000      -0.305       6.027   38.73%       5.058      6.027
+     ESUPZ_T4              5.000       0.291       4.090   53.27%       4.090      4.090      4.090
+            5699.000       1.000      -1.716       7.107    0.09%       5.687      6.075
+     ISUPZ_T4              5.000       0.899       4.277   61.29%       4.277      4.277      4.277
+            5699.000       1.000      -0.834       6.948   11.19%       4.277      6.058
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       47
+
+Loglikelihood
+
+          H0 Value                      -54902.425
+          H0 Scaling Correction Factor      1.2478
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                  109898.849
+          Bayesian (BIC)                110211.307
+          Sample-Size Adjusted BIC      110061.955
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes
+
+          Pearson Chi-Square
+
+          Value                            204.044
+          Degrees of freedom cannot be computed for this model part.
+
+          Likelihood Ratio Chi-Square
+
+          Value                            210.063
+          Degrees of freedom cannot be computed for this model part.
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR EACH LATENT CLASS VARIABLE
+BASED ON THE ESTIMATED MODEL
+
+  Latent Class
+    Variable    Class
+
+    C2             1       750.84296          0.13175
+                   2      1432.69629          0.25139
+                   3      2584.30615          0.45347
+                   4       931.15472          0.16339
+    C4             1       723.26147          0.12691
+                   2      1463.10303          0.25673
+                   3      2321.34888          0.40733
+                   4      1191.28662          0.20903
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.989
+
+
+LATENT CLASS INDICATOR MEANS AND PROBABILITIES FOR EACH LATENT CLASS
+
+     MEAN/PROBABILITY PROFILES FOR C2
+                       Latent class
+                     1      2      3      4
+     EDWC_T2
+       Category 1  0.999  0.076  0.999  0.124
+       Category 2  0.001  0.924  0.001  0.876
+     IDWC_T2
+       Category 1  0.421  0.930  0.967  0.452
+       Category 2  0.579  0.070  0.033  0.548
+     CLOSZ_T2      5.151  4.995  4.860  5.224
+     OPP5Z_T2      5.482  4.755  4.775  5.519
+     ESUPZ_T2      4.136  6.067  4.138  6.127
+     ISUPZ_T2      6.356  4.390  4.347  6.399
+
+     MEAN/PROBABILITY PROFILES FOR C4
+                       Latent class
+                     1      2      3      4
+     EDWC_T4
+       Category 1  0.999  0.076  0.999  0.124
+       Category 2  0.001  0.924  0.001  0.876
+     IDWC_T4
+       Category 1  0.421  0.930  0.967  0.452
+       Category 2  0.579  0.070  0.033  0.548
+     CLOSZ_T4      5.151  4.995  4.860  5.224
+     OPP5Z_T4      5.482  4.755  4.775  5.519
+     ESUPZ_T4      4.136  6.067  4.138  6.127
+     ISUPZ_T4      6.356  4.390  4.347  6.399
+
+
+LATENT TRANSITION PROBABILITIES BASED ON THE ESTIMATED MODEL
+
+  C2 Classes (Rows) by C4 Classes (Columns)
+
+            1        2        3        4
+
+   1     0.256    0.139    0.318    0.287
+   2     0.074    0.433    0.302    0.191
+   3     0.105    0.213    0.587    0.096
+   4     0.166    0.203    0.144    0.487
+
+
+TRANSITION PROBABILITY ODDS
+
+     TRANSITION TABLE ODDS AND 95% CONFIDENCE INTERVALS FOR C2 TO C4
+        1.000(1.000,1.000)   0.543(0.425,0.693)   1.240(1.022,1.504)   1.120(0.920,1.363)
+        0.171(0.138,0.210)   1.000(1.000,1.000)   0.699(0.618,0.791)   0.442(0.382,0.511)
+        0.179(0.156,0.204)   0.363(0.329,0.400)   1.000(1.000,1.000)   0.164(0.143,0.187)
+        0.341(0.283,0.409)   0.416(0.350,0.495)   0.295(0.242,0.358)   1.000(1.000,1.000)
+
+
+C-SPECIFIC CLASSIFICATION RESULTS
+
+Classification Quality for C2
+
+     Entropy                         0.990
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.988    0.000    0.012    0.000
+    2   0.000    0.994    0.000    0.006
+    3   0.004    0.000    0.996    0.000
+    4   0.000    0.004    0.000    0.996
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.986    0.000    0.014    0.000
+    2   0.000    0.997    0.000    0.002
+    3   0.003    0.000    0.997    0.000
+    4   0.000    0.009    0.000    0.991
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1      9.388   -3.891    5.135    0.000
+    2     -7.819    5.994   -4.907    0.000
+    3      8.122    4.160   13.812    0.000
+    4     -9.756   -4.661  -13.806    0.000
+
+Classification Quality for C4
+
+     Entropy                         0.988
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4
+
+    1   0.992    0.000    0.008    0.000
+    2   0.000    0.995    0.000    0.004
+    3   0.003    0.000    0.996    0.000
+    4   0.000    0.007    0.000    0.992
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4
+
+    1   0.989    0.000    0.011    0.000
+    2   0.000    0.993    0.001    0.006
+    3   0.003    0.000    0.997    0.000
+    4   0.000    0.005    0.000    0.995
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4
+
+    1      8.639   -5.165    4.143    0.000
+    2     -8.713    5.096   -2.336    0.000
+    3      7.832    4.997   13.813    0.000
+    4    -13.810   -5.236  -13.810    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Parameters in the Overall Part of the Model (Parameters Equal in All of the Classes)
+
+ Variances
+    CLOSZ_T2           0.981      0.019     51.627      0.000
+    OPP5Z_T2           0.893      0.015     58.887      0.000
+    ESUPZ_T2           0.060      0.002     29.152      0.000
+    ISUPZ_T2           0.120      0.003     37.307      0.000
+    CLOSZ_T4           0.977      0.019     51.432      0.000
+    OPP5Z_T4           0.872      0.016     55.893      0.000
+    ESUPZ_T4           0.056      0.002     30.172      0.000
+    ISUPZ_T4           0.119      0.003     38.328      0.000
+
+Parameters for Class-specific Model Parts of C2
+
+Latent Class C2#1
+
+ Means
+    CLOSZ_T2           5.151      0.025    202.774      0.000
+    OPP5Z_T2           5.482      0.022    254.474      0.000
+    ESUPZ_T2           4.136      0.002   2326.444      0.000
+    ISUPZ_T2           6.356      0.019    342.363      0.000
+
+ Thresholds
+    EDWC_T2$1          6.623      0.726      9.127      0.000
+    IDWC_T2$1         -0.320      0.058     -5.544      0.000
+
+Latent Class C2#2
+
+ Means
+    CLOSZ_T2           4.995      0.019    256.993      0.000
+    OPP5Z_T2           4.755      0.020    233.029      0.000
+    ESUPZ_T2           6.067      0.008    803.112      0.000
+    ISUPZ_T2           4.390      0.005    871.023      0.000
+
+ Thresholds
+    EDWC_T2$1         -2.505      0.071    -35.275      0.000
+    IDWC_T2$1          2.583      0.081     32.051      0.000
+
+Latent Class C2#3
+
+ Means
+    CLOSZ_T2           4.860      0.017    279.955      0.000
+    OPP5Z_T2           4.775      0.018    265.254      0.000
+    ESUPZ_T2           4.138      0.001   2923.483      0.000
+    ISUPZ_T2           4.347      0.003   1652.234      0.000
+
+ Thresholds
+    EDWC_T2$1          6.920      0.485     14.271      0.000
+    IDWC_T2$1          3.366      0.090     37.336      0.000
+
+Latent Class C2#4
+
+ Means
+    CLOSZ_T2           5.224      0.020    264.759      0.000
+    OPP5Z_T2           5.519      0.017    316.802      0.000
+    ESUPZ_T2           6.127      0.008    746.124      0.000
+    ISUPZ_T2           6.399      0.014    442.032      0.000
+
+ Thresholds
+    EDWC_T2$1         -1.954      0.070    -28.021      0.000
+    IDWC_T2$1         -0.192      0.049     -3.945      0.000
+
+Parameters for Class-specific Model Parts of C4
+
+Latent Class C4#1
+
+ Means
+    CLOSZ_T4           5.151      0.025    202.774      0.000
+    OPP5Z_T4           5.482      0.022    254.474      0.000
+    ESUPZ_T4           4.136      0.002   2326.444      0.000
+    ISUPZ_T4           6.356      0.019    342.363      0.000
+
+ Thresholds
+    EDWC_T4$1          6.623      0.726      9.127      0.000
+    IDWC_T4$1         -0.320      0.058     -5.544      0.000
+
+Latent Class C4#2
+
+ Means
+    CLOSZ_T4           4.995      0.019    256.993      0.000
+    OPP5Z_T4           4.755      0.020    233.029      0.000
+    ESUPZ_T4           6.067      0.008    803.112      0.000
+    ISUPZ_T4           4.390      0.005    871.023      0.000
+
+ Thresholds
+    EDWC_T4$1         -2.505      0.071    -35.275      0.000
+    IDWC_T4$1          2.583      0.081     32.051      0.000
+
+Latent Class C4#3
+
+ Means
+    CLOSZ_T4           4.860      0.017    279.955      0.000
+    OPP5Z_T4           4.775      0.018    265.254      0.000
+    ESUPZ_T4           4.138      0.001   2923.483      0.000
+    ISUPZ_T4           4.347      0.003   1652.234      0.000
+
+ Thresholds
+    EDWC_T4$1          6.920      0.485     14.271      0.000
+    IDWC_T4$1          3.366      0.090     37.336      0.000
+
+Latent Class C4#4
+
+ Means
+    CLOSZ_T4           5.224      0.020    264.759      0.000
+    OPP5Z_T4           5.519      0.017    316.802      0.000
+    ESUPZ_T4           6.127      0.008    746.124      0.000
+    ISUPZ_T4           6.399      0.014    442.032      0.000
+
+ Thresholds
+    EDWC_T4$1         -1.954      0.070    -28.021      0.000
+    IDWC_T4$1         -0.192      0.049     -3.945      0.000
+
+Categorical Latent Variables
+
+ C4#1     ON
+    C2#1               0.964      0.138      7.012      0.000
+    C2#2               0.125      0.151      0.829      0.407
+    C2#3               1.164      0.130      8.972      0.000
+
+ C4#2     ON
+    C2#1               0.152      0.151      1.002      0.316
+    C2#2               1.693      0.116     14.643      0.000
+    C2#3               1.672      0.118     14.212      0.000
+
+ C4#3     ON
+    C2#1               1.325      0.138      9.602      0.000
+    C2#2               1.681      0.127     13.229      0.000
+    C2#3               3.032      0.122     24.928      0.000
+
+ Means
+    C2#1              -0.215      0.049     -4.368      0.000
+    C2#2               0.431      0.043     10.136      0.000
+    C2#3               1.021      0.039     26.496      0.000
+    C4#1              -1.077      0.094    -11.461      0.000
+    C4#2              -0.876      0.088     -9.960      0.000
+    C4#3              -1.222      0.100    -12.275      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.481E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+RESULTS IN PROBABILITY SCALE
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Results for Class-specific Model Parts of C2
+
+Latent Class C2#1
+
+ EDWC_T2
+    Category 1         0.999      0.001   1037.872      0.000
+    Category 2         0.001      0.001      1.380      0.168
+ IDWC_T2
+    Category 1         0.421      0.014     29.883      0.000
+    Category 2         0.579      0.014     41.161      0.000
+
+Latent Class C2#2
+
+ EDWC_T2
+    Category 1         0.076      0.005     15.234      0.000
+    Category 2         0.924      0.005    186.464      0.000
+ IDWC_T2
+    Category 1         0.930      0.005    176.696      0.000
+    Category 2         0.070      0.005     13.343      0.000
+
+Latent Class C2#3
+
+ EDWC_T2
+    Category 1         0.999      0.000   2089.234      0.000
+    Category 2         0.001      0.000      2.064      0.039
+ IDWC_T2
+    Category 1         0.967      0.003    332.313      0.000
+    Category 2         0.033      0.003     11.476      0.000
+
+Latent Class C2#4
+
+ EDWC_T2
+    Category 1         0.124      0.008     16.367      0.000
+    Category 2         0.876      0.008    115.558      0.000
+ IDWC_T2
+    Category 1         0.452      0.012     37.474      0.000
+    Category 2         0.548      0.012     45.412      0.000
+
+Results for Class-specific Model Parts of C4
+
+Latent Class C4#1
+
+ EDWC_T4
+    Category 1         0.999      0.001   1037.872      0.000
+    Category 2         0.001      0.001      1.380      0.168
+ IDWC_T4
+    Category 1         0.421      0.014     29.883      0.000
+    Category 2         0.579      0.014     41.161      0.000
+
+Latent Class C4#2
+
+ EDWC_T4
+    Category 1         0.076      0.005     15.234      0.000
+    Category 2         0.924      0.005    186.464      0.000
+ IDWC_T4
+    Category 1         0.930      0.005    176.696      0.000
+    Category 2         0.070      0.005     13.343      0.000
+
+Latent Class C4#3
+
+ EDWC_T4
+    Category 1         0.999      0.000   2089.234      0.000
+    Category 2         0.001      0.000      2.064      0.039
+ IDWC_T4
+    Category 1         0.967      0.003    332.313      0.000
+    Category 2         0.033      0.003     11.476      0.000
+
+Latent Class C4#4
+
+ EDWC_T4
+    Category 1         0.124      0.008     16.367      0.000
+    Category 2         0.876      0.008    115.558      0.000
+ IDWC_T4
+    Category 1         0.452      0.012     37.474      0.000
+    Category 2         0.548      0.012     45.412      0.000
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     %OVERALL%
+
+     c4#1 ON c2#1*0.96436;
+     c4#1 ON c2#2*0.12480;
+     c4#1 ON c2#3*1.16429;
+     c4#2 ON c2#1*0.15187;
+     c4#2 ON c2#2*1.69254;
+     c4#2 ON c2#3*1.67229;
+     c4#3 ON c2#1*1.32464;
+     c4#3 ON c2#2*1.68082;
+     c4#3 ON c2#3*3.03249;
+
+     [ c2#1*-0.21523 ];
+     [ c2#2*0.43089 ];
+     [ c2#3*1.02079 ];
+     [ c4#1*-1.07724 ];
+     [ c4#2*-0.87610 ];
+     [ c4#3*-1.22237 ];
+
+     closz_t2*0.98095 (5);
+     opp5z_t2*0.89270 (6);
+     esupz_t2*0.05987 (7);
+     isupz_t2*0.11954 (8);
+     closz_t4*0.97735 (9);
+     opp5z_t4*0.87228 (10);
+     esupz_t4*0.05587 (11);
+     isupz_t4*0.11926 (12);
+
+
+  MODEL C2:
+
+     %C2#1%
+
+     [ closz_t2*5.15122 ] (1);
+     [ opp5z_t2*5.48208 ] (2);
+     [ esupz_t2*4.13595 ] (3);
+     [ isupz_t2*6.35595 ] (4);
+
+     [ edwc_t2$1*6.62286 ] (25);
+     [ idwc_t2$1*-0.32021 ] (26);
+
+     %C2#2%
+
+     [ closz_t2*4.99536 ] (13);
+     [ opp5z_t2*4.75475 ] (14);
+     [ esupz_t2*6.06681 ] (15);
+     [ isupz_t2*4.38995 ] (16);
+
+     [ edwc_t2$1*-2.50470 ] (27);
+     [ idwc_t2$1*2.58342 ] (28);
+
+     %C2#3%
+
+     [ closz_t2*4.86041 ] (17);
+     [ opp5z_t2*4.77479 ] (18);
+     [ esupz_t2*4.13840 ] (19);
+     [ isupz_t2*4.34714 ] (20);
+
+     [ edwc_t2$1*6.91973 ] (29);
+     [ idwc_t2$1*3.36583 ] (30);
+
+     %C2#4%
+
+     [ closz_t2*5.22385 ] (21);
+     [ opp5z_t2*5.51938 ] (22);
+     [ esupz_t2*6.12664 ] (23);
+     [ isupz_t2*6.39929 ] (24);
+
+     [ edwc_t2$1*-1.95448 ] (31);
+     [ idwc_t2$1*-0.19215 ] (32);
+
+  MODEL C4:
+
+     %C4#1%
+
+     [ closz_t4*5.15122 ] (1);
+     [ opp5z_t4*5.48208 ] (2);
+     [ esupz_t4*4.13595 ] (3);
+     [ isupz_t4*6.35595 ] (4);
+
+     [ edwc_t4$1*6.62286 ] (25);
+     [ idwc_t4$1*-0.32021 ] (26);
+
+     %C4#2%
+
+     [ closz_t4*4.99536 ] (13);
+     [ opp5z_t4*4.75475 ] (14);
+     [ esupz_t4*6.06681 ] (15);
+     [ isupz_t4*4.38995 ] (16);
+
+     [ edwc_t4$1*-2.50470 ] (27);
+     [ idwc_t4$1*2.58342 ] (28);
+
+     %C4#3%
+
+     [ closz_t4*4.86041 ] (17);
+     [ opp5z_t4*4.77479 ] (18);
+     [ esupz_t4*4.13840 ] (19);
+     [ isupz_t4*4.34714 ] (20);
+
+     [ edwc_t4$1*6.91973 ] (29);
+     [ idwc_t4$1*3.36583 ] (30);
+
+     %C4#4%
+
+     [ closz_t4*5.22385 ] (21);
+     [ opp5z_t4*5.51938 ] (22);
+     [ esupz_t4*6.12664 ] (23);
+     [ isupz_t4*6.39929 ] (24);
+
+     [ edwc_t4$1*-1.95448 ] (31);
+     [ idwc_t4$1*-0.19215 ] (32);
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 1 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                    1             2             3             4             1
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                    2             3             4
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 1 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                    1             2             3             4            13
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   14            15            16
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 1 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                    1             2             3             4            17
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   18            19            20
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 1 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                    1             2             3             4            21
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   22            23            24
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 2 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   13            14            15            16             1
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                    2             3             4
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 2 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   13            14            15            16            13
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   14            15            16
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 2 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   13            14            15            16            17
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   18            19            20
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 2 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   13            14            15            16            21
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   22            23            24
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 3 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   17            18            19            20             1
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                    2             3             4
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 3 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   17            18            19            20            13
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   14            15            16
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 3 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   17            18            19            20            17
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   18            19            20
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 3 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   17            18            19            20            21
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   22            23            24
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 4 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   21            22            23            24             1
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                    2             3             4
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 4 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   21            22            23            24            13
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   14            15            16
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 4 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   21            22            23            24            17
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   18            19            20
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS PATTERN 4 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                   21            22            23            24            21
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                   22            23            24
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2           5
+ OPP5Z_T2           0             6
+ ESUPZ_T2           0             0             7
+ ISUPZ_T2           0             0             0             8
+ CLOSZ_T4           0             0             0             0             9
+ OPP5Z_T4           0             0             0             0             0
+ ESUPZ_T4           0             0             0             0             0
+ ISUPZ_T4           0             0             0             0             0
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4          10
+ ESUPZ_T4           0            11
+ ISUPZ_T4           0             0            12
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS INDICATOR MODEL PART
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   25            26            25            26
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   25            26            27            28
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   25            26            29            30
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   25            26            31            32
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   27            28            25            26
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   27            28            27            28
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   27            28            29            30
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   27            28            31            32
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   29            30            25            26
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   29            30            27            28
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   29            30            29            30
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   29            30            31            32
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   31            32            25            26
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   31            32            27            28
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   31            32            29            30
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                   31            32            31            32
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS REGRESSION MODEL PART
+
+
+           ALPHA(C)
+              C2#1          C2#2          C2#3          C2#4          C4#1
+              ________      ________      ________      ________      ________
+                   33            34            35             0            36
+
+
+           ALPHA(C)
+              C4#2          C4#3          C4#4
+              ________      ________      ________
+                   37            38             0
+
+
+           BETA(C)
+              C2#1          C2#2          C2#3          C2#4
+              ________      ________      ________      ________
+ C4#1              39            42            45             0
+ C4#2              40            43            46             0
+ C4#3              41            44            47             0
+ C4#4               0             0             0             0
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 1 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                4.250         4.250         4.250         4.250         4.250
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                4.250         4.250         4.250
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 1 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                4.250         4.250         4.250         4.250         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 1 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                4.250         4.250         4.250         4.250         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 1 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                4.250         4.250         4.250         4.250         5.750
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.750         5.750         5.750
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 2 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         4.250
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                4.250         4.250         4.250
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 2 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 2 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 2 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.750
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.750         5.750         5.750
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 3 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         4.250
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                4.250         4.250         4.250
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 3 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 3 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 3 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.000         5.000         5.000         5.000         5.750
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.750         5.750         5.750
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 4 1
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.750         5.750         5.750         5.750         4.250
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                4.250         4.250         4.250
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 4 2
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.750         5.750         5.750         5.750         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 4 3
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.750         5.750         5.750         5.750         5.000
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.000         5.000         5.000
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS PATTERN 4 4
+
+
+           NU
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+                5.750         5.750         5.750         5.750         5.750
+
+
+           NU
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+                5.750         5.750         5.750
+
+
+           THETA
+              CLOSZ_T2      OPP5Z_T2      ESUPZ_T2      ISUPZ_T2      CLOSZ_T4
+              ________      ________      ________      ________      ________
+ CLOSZ_T2       0.500
+ OPP5Z_T2       0.000         0.500
+ ESUPZ_T2       0.000         0.000         0.500
+ ISUPZ_T2       0.000         0.000         0.000         0.500
+ CLOSZ_T4       0.000         0.000         0.000         0.000         0.500
+ OPP5Z_T4       0.000         0.000         0.000         0.000         0.000
+ ESUPZ_T4       0.000         0.000         0.000         0.000         0.000
+ ISUPZ_T4       0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              OPP5Z_T4      ESUPZ_T4      ISUPZ_T4
+              ________      ________      ________
+ OPP5Z_T4       0.500
+ ESUPZ_T4       0.000         0.500
+ ISUPZ_T4       0.000         0.000         0.500
+
+
+     STARTING VALUES FOR LATENT CLASS INDICATOR MODEL PART
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+               -0.337         0.594        -0.337         0.594
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+               -0.337         0.594         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+               -0.337         0.594         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 1 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+               -0.337         0.594         1.163         2.094
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344        -0.337         0.594
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 2 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         1.163         2.094
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344        -0.337         0.594
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 3 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                0.413         1.344         1.163         2.094
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 1
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                1.163         2.094        -0.337         0.594
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 2
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                1.163         2.094         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 3
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                1.163         2.094         0.413         1.344
+
+
+           TAU(U) FOR LATENT CLASS PATTERN 4 4
+              EDWC_T2$      IDWC_T2$      EDWC_T4$      IDWC_T4$
+              ________      ________      ________      ________
+                1.163         2.094         1.163         2.094
+
+
+     STARTING VALUES FOR LATENT CLASS REGRESSION MODEL PART
+
+
+           ALPHA(C)
+              C2#1          C2#2          C2#3          C2#4          C4#1
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA(C)
+              C4#2          C4#3          C4#4
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           BETA(C)
+              C2#1          C2#2          C2#3          C2#4
+              ________      ________      ________      ________
+ C4#1           0.000         0.000         0.000         0.000
+ C4#2           0.000         0.000         0.000         0.000
+ C4#3           0.000         0.000         0.000         0.000
+ C4#4           0.000         0.000         0.000         0.000
+
+
+TECHNICAL 15 OUTPUT
+
+
+     ESTIMATED CONDITIONAL PROBABILITIES FOR THE LATENT CLASS VARIABLES
+
+     P(C2=1)=0.132
+     P(C2=2)=0.251
+     P(C2=3)=0.453
+     P(C2=4)=0.163
+
+
+     P(C4=1|C2=1)=0.256
+     P(C4=2|C2=1)=0.139
+     P(C4=3|C2=1)=0.318
+     P(C4=4|C2=1)=0.287
+
+
+     P(C4=1|C2=2)=0.074
+     P(C4=2|C2=2)=0.433
+     P(C4=3|C2=2)=0.302
+     P(C4=4|C2=2)=0.191
+
+
+     P(C4=1|C2=3)=0.105
+     P(C4=2|C2=3)=0.213
+     P(C4=3|C2=3)=0.587
+     P(C4=4|C2=3)=0.096
+
+
+     P(C4=1|C2=4)=0.166
+     P(C4=2|C2=4)=0.203
+     P(C4=3|C2=4)=0.144
+     P(C4=4|C2=4)=0.487
+
+
+     ESTIMATED MARGINAL PROBABILITIES FOR THE LATENT CLASS VARIABLES
+
+     P(C4=1)=0.127
+     P(C4=2)=0.257
+     P(C4=3)=0.407
+     P(C4=4)=0.209
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+  Latent Class
+    Pattern
+
+    1  1        192.41665          0.03376
+    1  2        104.40883          0.01832
+    1  3        238.60625          0.04187
+    1  4        215.41123          0.03780
+    2  1        105.68738          0.01854
+    2  2        619.78425          0.10875
+    2  3        433.27941          0.07603
+    2  4        273.94530          0.04807
+    3  1        270.59063          0.04748
+    3  2        549.90593          0.09649
+    3  3       1515.77631          0.26597
+    3  4        248.03312          0.04352
+    4  1        154.56683          0.02712
+    4  2        189.00402          0.03316
+    4  3        133.68694          0.02346
+    4  4        453.89692          0.07965
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+  Latent Class
+    Pattern
+
+    1  1        192.41184          0.03376
+    1  2        104.40439          0.01832
+    1  3        238.60266          0.04187
+    1  4        215.40710          0.03780
+    2  1        105.68533          0.01854
+    2  2        619.78499          0.10875
+    2  3        433.28192          0.07603
+    2  4        273.94548          0.04807
+    3  1        270.58733          0.04748
+    3  2        549.91067          0.09649
+    3  3       1515.78803          0.26597
+    3  4        248.03695          0.04352
+    4  1        154.56474          0.02712
+    4  2        189.00384          0.03316
+    4  3        133.68865          0.02346
+    4  4        453.89609          0.07964
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR EACH LATENT CLASS VARIABLE
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+  Latent Class
+    Variable    Class
+
+    C2             1       750.82599          0.13175
+                   2      1432.69771          0.25139
+                   3      2584.32299          0.45347
+                   4       931.15332          0.16339
+    C4             1       723.24924          0.12691
+                   2      1463.10389          0.25673
+                   3      2321.36125          0.40733
+                   4      1191.28562          0.20903
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS PATTERN
+
+Class Counts and Proportions
+
+  Latent Class
+    Pattern
+
+    1  1              192          0.03369
+    1  2              104          0.01825
+    1  3              235          0.04124
+    1  4              218          0.03825
+    2  1              106          0.01860
+    2  2              618          0.10844
+    2  3              435          0.07633
+    2  4              279          0.04896
+    3  1              269          0.04720
+    3  2              550          0.09651
+    3  3             1521          0.26689
+    3  4              246          0.04317
+    4  1              154          0.02702
+    4  2              188          0.03299
+    4  3              133          0.02334
+    4  4              451          0.07914
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR EACH LATENT CLASS VARIABLE
+BASED ON THEIR MOST LIKELY LATENT CLASS PATTERN
+
+  Latent Class
+    Variable    Class
+
+    C2             1             749          0.13143
+                   2            1438          0.25232
+                   3            2586          0.45376
+                   4             926          0.16248
+    C4             1             721          0.12651
+                   2            1460          0.25619
+                   3            2324          0.40779
+                   4            1194          0.20951
+
+
+LATENT CLASS INDICATOR ODDS RATIOS FOR THE LATENT CLASSES
+
+                                                95% C.I.
+                    Estimate       S.E.  Lower 2.5% Upper 2.5%
+
+Results for Class-specific Model Parts of C2
+
+Latent Class C2#1 Compared to Latent Class C2#2
+
+ EDWC_T2
+    Category > 1       0.000      0.000      0.000      0.000
+ IDWC_T2
+    Category > 1      18.240      1.797     15.038     22.125
+
+Latent Class C2#1 Compared to Latent Class C2#3
+
+ EDWC_T2
+    Category > 1       1.346      1.174      0.243      7.441
+ IDWC_T2
+    Category > 1      39.887      4.442     32.065     49.617
+
+Latent Class C2#1 Compared to Latent Class C2#4
+
+ EDWC_T2
+    Category > 1       0.000      0.000      0.000      0.001
+ IDWC_T2
+    Category > 1       1.137      0.082      0.986      1.310
+
+Latent Class C2#2 Compared to Latent Class C2#3
+
+ EDWC_T2
+    Category > 1   12387.359   6067.875   4742.583  32355.078
+ IDWC_T2
+    Category > 1       2.187      0.263      1.727      2.768
+
+Latent Class C2#2 Compared to Latent Class C2#4
+
+ EDWC_T2
+    Category > 1       1.734      0.171      1.429      2.103
+ IDWC_T2
+    Category > 1       0.062      0.006      0.052      0.075
+
+Latent Class C2#3 Compared to Latent Class C2#4
+
+ EDWC_T2
+    Category > 1       0.000      0.000      0.000      0.000
+ IDWC_T2
+    Category > 1       0.028      0.003      0.023      0.035
+
+Results for Class-specific Model Parts of C4
+
+Latent Class C4#1 Compared to Latent Class C4#2
+
+ EDWC_T4
+    Category > 1       0.000      0.000      0.000      0.000
+ IDWC_T4
+    Category > 1      18.240      1.797     15.038     22.125
+
+Latent Class C4#1 Compared to Latent Class C4#3
+
+ EDWC_T4
+    Category > 1       1.346      1.174      0.243      7.441
+ IDWC_T4
+    Category > 1      39.887      4.442     32.065     49.617
+
+Latent Class C4#1 Compared to Latent Class C4#4
+
+ EDWC_T4
+    Category > 1       0.000      0.000      0.000      0.001
+ IDWC_T4
+    Category > 1       1.137      0.082      0.986      1.310
+
+Latent Class C4#2 Compared to Latent Class C4#3
+
+ EDWC_T4
+    Category > 1   12387.359   6067.875   4742.583  32355.078
+ IDWC_T4
+    Category > 1       2.187      0.263      1.727      2.768
+
+Latent Class C4#2 Compared to Latent Class C4#4
+
+ EDWC_T4
+    Category > 1       1.734      0.171      1.429      2.103
+ IDWC_T4
+    Category > 1       0.062      0.006      0.052      0.075
+
+Latent Class C4#3 Compared to Latent Class C4#4
+
+ EDWC_T4
+    Category > 1       0.000      0.000      0.000      0.000
+ IDWC_T4
+    Category > 1       0.028      0.003      0.023      0.035
+
+
+TECHNICAL 8 OUTPUT
+
+
+   E STEP  ITER  LOGLIKELIHOOD    ABS CHANGE   REL CHANGE  ALGORITHM
+              1 -0.12659002D+06    0.0000000    0.0000000  EM
+              2 -0.76012205D+05 ************    0.3995403  EM
+              3 -0.70684277D+05 5327.9283930    0.0700931  EM
+              4 -0.61560819D+05 9123.4582157    0.1290734  EM
+              5 -0.56968087D+05 4592.7315376    0.0746048  EM
+              6 -0.55479131D+05 1488.9558628    0.0261367  EM
+              7 -0.55005615D+05  473.5164616    0.0085350  EM
+              8 -0.54911420D+05   94.1949278    0.0017125  EM
+              9 -0.54902959D+05    8.4613005    0.0001541  EM
+             10 -0.54902456D+05    0.5030437    0.0000092  EM
+             11 -0.54902426D+05    0.0292681    0.0000005  EM
+             12 -0.54902425D+05    0.0018112    0.0000000  EM
+             13 -0.54902425D+05    0.0001205    0.0000000  EM
+             14 -0.54902425D+05    0.0000088    0.0000000  EM
+
+
+  TECHNICAL 8 OUTPUT FOR LATENT CLASS REORDERING
+
+
+
+   E STEP  ITER  LOGLIKELIHOOD    ABS CHANGE   REL CHANGE  ALGORITHM
+              1 -0.56647073D+05    0.0000000    0.0000000  EM
+              2 -0.54987913D+05 1659.1596656    0.0292894  EM
+              3 -0.54904051D+05   83.8622557    0.0015251  EM
+              4 -0.54902490D+05    1.5613487    0.0000284  EM
+              5 -0.54902432D+05    0.0579198    0.0000011  EM
+              6 -0.54902425D+05    0.0062834    0.0000001  EM
+              7 -0.54902425D+05    0.0006967    0.0000000  EM
+              8 -0.54902425D+05    0.0000771    0.0000000  EM
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    result_lta_inv.txt
+
+  Order and format of variables
+
+    EDWC_T2        F10.3
+    IDWC_T2        F10.3
+    EDWC_T4        F10.3
+    IDWC_T4        F10.3
+    CLOSZ_T2       F10.3
+    OPP5Z_T2       F10.3
+    ESUPZ_T2       F10.3
+    ISUPZ_T2       F10.3
+    CLOSZ_T4       F10.3
+    OPP5Z_T4       F10.3
+    ESUPZ_T4       F10.3
+    ISUPZ_T4       F10.3
+    CPROB1         F10.3
+    CPROB2         F10.3
+    CPROB3         F10.3
+    CPROB4         F10.3
+    CPROB5         F10.3
+    CPROB6         F10.3
+    CPROB7         F10.3
+    CPROB8         F10.3
+    CPROB9         F10.3
+    CPROB10        F10.3
+    CPROB11        F10.3
+    CPROB12        F10.3
+    CPROB13        F10.3
+    CPROB14        F10.3
+    CPROB15        F10.3
+    CPROB16        F10.3
+    C2             F10.3
+    C4             F10.3
+    MLCJOINT       F10.3
+    PID            F12.0
+
+  Save file format
+    31F10.3 F12.0
+
+  Save file record length    10000
+
+  Save missing symbol        *
+
+
+     Beginning Time:  09:24:13
+        Ending Time:  09:24:14
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2024 Muthen & Muthen

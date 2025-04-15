@@ -1,0 +1,111 @@
+TITLE:
+LTA (Invariant_optseed)
+DATA:
+FILE = "lta_optseed.dat";
+ 
+VARIABLE:
+NAMES = pid closz_t2 closz_t4 clos_t2 clos_t4 esupz_t2 esupz_t4 esup_t2 esup_t4
+     edwz_t2 edwz_t4 edw_t2 edw_t4 isupz_t2 isupz_t4 isup_t2 isup_t4 idwz_t2 idwz_t4
+     idw_t2 idw_t4 meetz_t2 meetz_t4 meet_t2 meet_t4 contz_t2 contz_t4 cont_t2
+     cont_t4 oppz_t2 oppz_t4 opp_t2 opp_t4 opp5z_t2 opp5z_t4 opp5_t2 opp5_t4
+     opp5n_t2 opp5n_t4 agec_t2 agec_t4 educ_t2 educ_t4 siopc_t2 siopc_t4 age1_t2
+     age1_t4 age1_t21 age1_t23 age1_t41 age1_t43 edu1_t2 edu1_t4 edu1_t21 edu1_t23
+     edu1_t41 edu1_t43 siop1_t2 siop1_t4 sip1_t21 sip1_t23 sip1_t41 sip1_t43 age2_t2
+     age2_t4 age2_t21 age2_t23 age2_t41 age2_t43 edu2_t2 edu2_t4 edu2_t21 edu2_t23
+     edu2_t41 edu2_t43 siop2_t2 siop2_t4 sip2_t21 sip2_t23 sip2_t41 sip2_t43 age3_t2
+     age3_t4 age3_t21 age3_t23 age3_t41 age3_t43 edu3_t2 edu3_t4 edu3_t21 edu3_t23
+     edu3_t41 edu3_t43 siop3_t2 siop3_t4 sip3_t21 sip3_t23 sip3_t41 sip3_t43 incc_t2
+     incc_t4 hwc_t2 hwc_t4 inccw hwcw incnw hwnw inc1_t2 inc1_t4 inc2_t2 inc2_t4
+     inc3_t2 inc3_t4 inc1_t21 inc1_t23 inc1_t41 inc1_t43 inc2_t21 inc2_t23 inc2_t41
+     inc2_t43 inc3_t21 inc3_t23 inc3_t41 inc3_t43 hw1_t2 hw1_t4 hw2_t2 hw2_t4 hw3_t2
+     hw3_t4 hw1_t21 hw1_t23 hw1_t41 hw1_t43 hw2_t21 hw2_t23 hw2_t41 hw2_t43 hw3_t21
+     hw3_t23 hw3_t41 hw3_t43 inc11w inc11w_1 inc11w_3 inc11w_5 inc11w_7 inc12w
+     inc12w_1 inc12w_3 inc12w_5 inc12w_7 hw11w hw11w_1 hw11w_3 hw11w_5 hw11w_7 hw12w
+     hw12w_1 hw12w_3 hw12w_5 hw12w_7 inc21w inc21w_1 inc21w_3 inc21w_5 inc21w_7
+     inc22w inc22w_1 inc22w_3 inc22w_5 inc22w_7 hw21w hw21w_1 hw21w_3 hw21w_5
+     hw21w_7 hw22w hw22w_1 hw22w_3 hw22w_5 hw22w_7 inc31w inc31w_1 inc31w_3 inc31w_5
+     inc31w_7 inc32w inc32w_1 inc32w_3 inc32w_5 inc32w_7 hw31w hw31w_1 hw31w_3
+     hw31w_5 hw31w_7 hw32w hw32w_1 hw32w_3 hw32w_5 hw32w_7 sex_t2 sex_t4 cd_t2 cd_t4
+     childcw childnw dw_t2 dw_t4 dw_t22 dw_t23 dw_t42 dw_t43 dww dww1_2 dww1_3 ag_t2
+     ag_t4 aage_t2 aage_t4 aedu_t2 aedu_t4 asiop_t2 asiop_t4 ainc_t2 ainc_t4 ahw_t2
+     ahw_t4 ainccw ahwcw aincnw aincnw_1 aincnw_3 ahwnw ahwnw_1 ahwnw_3 ahk_t2
+     ahk_t4 ahknw page_t2 page_t4 pagen_t2 pagen_t4 page_t22 page_t23 page_t24
+     page_t42 page_t43 page_t44 psex_t2 psex_t4 pmar_t2 pmar_t4 pmarnw pedu_t2
+     pedu_t4 pedu_t22 pedu_t23 pedu_t42 pedu_t43 phk_t2 phk_t4 pcor_t2 pcor_t4
+     pcornw ppart_t2 ppart_t4 finc_t2 finc_t4 finccw fincnw fincnw_1 fincnw_3
+     furb_t2 furb_t4 fprov_t2 fprov_t4 fpov_t21 fpov_t23 fpov_t41 fpov_t43 lft_t2
+     lft_t4 fcz_t2 fcz_t4 resp_t2 resp_t4 lifetime; 
+ MISSING=.;
+ usevar =  closz_t2 opp5z_t2 esupz_t2 isupz_t2
+closz_t4 opp5z_t4 esupz_t4 isupz_t4
+edwc_t2 idwc_t2
+edwc_t4 idwc_t4; ! Time1-3 have 4 continuous items. !
+
+categorical = edwc_t2 idwc_t2 edwc_t4 idwc_t4;
+
+IDVARIABLE = pid;
+classes = c2(4) c4(4);
+DEFINE:
+
+edwc_t2 = 0;
+IF (edw_t2 LT esup_t2*1) THEN edwc_t2 = 1;
+
+idwc_t2 = 0;
+IF (idw_t2 LT isup_t2*1) THEN idwc_t2 = 1;
+    
+edwc_t4 = 0;
+IF (edw_t4 LT esup_t4*1) THEN edwc_t4 = 1;
+
+idwc_t4 = 0;
+IF (idw_t4 LT isup_t4*1) THEN idwc_t4 = 1;
+ANALYSIS:
+ALGORITHM = EM;
+! algorithm = integration; !
+! integration = 30; !
+estimator = mlr;
+type = mixture;
+optseed = 161421;
+starts = 600 200;
+! LRTSTARTS = 20 5 100 25; !
+processors=10;
+MODEL:
+%overall%
+c4 on c2; !!! estimate all multinomial logistic regressions !!!
+!!! The above syntax can also be written as: !!!
+! c2#1 on c1#1 c1#2 c1#3; !
+! c2#2 on c1#1 c1#2 c1#3; !
+! c2#3 on c1#1 c1#2 c1#3; !
+
+MODEL c2: !!! the following syntax will allow item thresholds !!!
+!!! to be estimated for each class (e.g. invariance) !!!
+%c2#1%
+[closz_t2-isupz_t2] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t2$1 idwc_t2$1] (5-6);
+%c2#2%
+[closz_t2-isupz_t2] (7-10);
+[edwc_t2$1 idwc_t2$1] (11-12);
+%c2#3%
+[closz_t2-isupz_t2] (13-16);
+[edwc_t2$1 idwc_t2$1] (17-18);
+%c2#4%
+[closz_t2-isupz_t2] (19-22);
+[edwc_t2$1 idwc_t2$1] (23-24);
+    
+MODEL c4:
+%c4#1%
+[closz_t4-isupz_t4] (1-4); !!! (1-6) is the only discrepancy between non-inv and inv. !!!
+[edwc_t4$1 idwc_t4$1] (5-6);
+%c4#2%
+[closz_t4-isupz_t4] (7-10);
+[edwc_t4$1 idwc_t4$1] (11-12);
+%c4#3%
+[closz_t4-isupz_t4] (13-16);
+[edwc_t4$1 idwc_t4$1] (17-18);
+%c4#4%
+[closz_t4-isupz_t4] (19-22);
+[edwc_t4$1 idwc_t4$1] (23-24);
+OUTPUT:
+tech1 tech8 tech15 svalues(2 1 3 4 | 2 1 3 4);
+SAVEDATA:
+FILE = result_lta_inv.txt;
+SAVE = CPROB;
